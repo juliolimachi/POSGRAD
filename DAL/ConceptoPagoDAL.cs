@@ -43,7 +43,7 @@ namespace DAL
                             Descripcion = reader["Descripcion"].ToString(),
                             FechaCreacion = Convert.ToDateTime(reader["FechaCreacion"] is DBNull ? null : reader["FechaCreacion"]),
                             Estado = Convert.ToInt32(reader["Estado"]is DBNull ? 0 : reader["Estado"]),
-
+                            
                           
                         };
                         ConceptoPagos.Add(ConceptoPago);

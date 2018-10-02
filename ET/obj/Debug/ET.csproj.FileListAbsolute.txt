@@ -62,3 +62,8 @@ D:\PROYECTO DESARROLLO\Fisiandroide-p2.1.1\ET\bin\Debug\ET.pdb
 D:\PROYECTO DESARROLLO\Fisiandroide-p2.1.1\ET\obj\Debug\ET.dll
 D:\PROYECTO DESARROLLO\Fisiandroide-p2.1.1\ET\obj\Debug\ET.pdb
 D:\PROYECTO DESARROLLO\Fisiandroide-p2.1.1\ET\obj\Debug\ET.csprojResolveAssemblyReference.cache
+D:\PROYECTO DESARROLLO\POSGRAD\ET\bin\Debug\ET.dll
+D:\PROYECTO DESARROLLO\POSGRAD\ET\bin\Debug\ET.pdb
+D:\PROYECTO DESARROLLO\POSGRAD\ET\obj\Debug\ET.csprojResolveAssemblyReference.cache
+D:\PROYECTO DESARROLLO\POSGRAD\ET\obj\Debug\ET.dll
+D:\PROYECTO DESARROLLO\POSGRAD\ET\obj\Debug\ET.pdb

@@ -42,7 +42,8 @@ namespace DAL
                             Formato = reader["Formato"].ToString(),
                             Periodo = reader["Periodo"].ToString(),
                             FechaSubida = Convert.ToDateTime(reader["FechaSubida"] is DBNull ? 0 : reader["FechaSubida"]),
-
+                            EstadoArchivo = Convert.ToInt32(reader["EstadoArchivo"]),
+                            EstadoValidacion = Convert.ToInt32(reader["EstadoValidacion"]),
                         };
                         ArchivoPagos.Add(ArchivoPago);
 
@@ -90,7 +91,8 @@ namespace DAL
                             Formato = reader["Formato"].ToString(),
                             Periodo = reader["Periodo"].ToString(),
                             FechaSubida = Convert.ToDateTime(reader["FechaSubida"] is DBNull ? 0 : reader["FechaSubida"]),
-
+                            EstadoArchivo = Convert.ToInt32(reader["EstadoArchivo"]),
+                            EstadoValidacion = Convert.ToInt32(reader["EstadoValidacion"]),
 
                         };
 
@@ -139,7 +141,8 @@ namespace DAL
                             Formato = reader["Formato"].ToString(),
                             Periodo = reader["Periodo"].ToString(),
                             FechaSubida = Convert.ToDateTime(reader["FechaSubida"] is DBNull ? 0 : reader["FechaSubida"]),
-
+                            EstadoArchivo = Convert.ToInt32(reader["EstadoArchivo"]),
+                            EstadoValidacion = Convert.ToInt32(reader["EstadoValidacion"]),
                         };
 
                         ArchivoPagos.Add(ArchivoPago);
