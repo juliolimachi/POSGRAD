@@ -131,17 +131,15 @@
                             },
 
                                 {
-                                    "data": "EstadoValidacion",
+                                    "data": "EstadoValidacion"  ,
                                     "render": function (value) {
                                         if (value === 0) {
                                             return "<small class='label label-warning'><i class='fa fa-clock-o'></i>Pendiente</small>";
-
                                         }
                                         
 
                                         if (value === 1) {
                                             return "<small class='label label-success'>Validado</small>";
-
                                         }
 
                                     }
@@ -158,7 +156,12 @@
                           {
                               "data": "IdArchivoPago", "render": function (data) {
 
-                                  return "<a class='btn btn-success btn-xs' style='margin-right: 5px;' onclick=CargarExcel(" + data + ") data-id='" + data + "'  data-title='tooltip' data-placement='top'  data-toggle='modal' data-target='#modalito' data-original-title='Generar Crystall'><span class='glyphicon glyphicon-saved'></span></a>";
+                                  if (data == 0) {
+                                      return "<a class='btn btn-success btn-xs' style='margin-right: 5px;' onclick=CargarExcel(" + data + ") data-id='" + data + "'   data-title='tooltip' data-placement='top'  data-toggle='modal'  data-original-title=''><span class='glyphicon glyphicon-saved'></span></a>";
+                                  } else {
+                                      return "<a class='btn btn-primary btn-xs' style='margin-right: 5px;' onclick=CargarExcel(" + data + ") data-id='" + data + "'  data-title='tooltip' data-placement='top'  data-toggle='modal'  data-original-title=''><span class='glyphicon glyphicon-saved'></span></a>";
+                                  };
+                                 
                               },
 
                           }
