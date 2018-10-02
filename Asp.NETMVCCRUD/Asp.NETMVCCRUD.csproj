@@ -404,9 +404,6 @@
     <Content Include="Content\bower_components\bootstrap-daterangepicker\website\index.html" />
     <Content Include="Content\bower_components\bootstrap-daterangepicker\website\website.css" />
     <Content Include="Content\bower_components\bootstrap-daterangepicker\website\website.js" />
-    <Content Include="Content\bower_components\bootstrap-slider\bootstrap-slider.js" />
-    <Content Include="Content\bower_components\bootstrap-slider\locks.png" />
-    <Content Include="Content\bower_components\bootstrap-slider\slider.css" />
     <Content Include="Content\bower_components\bootstrap-timepicker\js\bootstrap-timepicker.js" />
     <Content Include="Content\bower_components\bootstrap\dist\css\bootstrap-theme.css" />
     <Content Include="Content\bower_components\bootstrap\dist\css\bootstrap-theme.min.css" />
@@ -4455,9 +4452,6 @@
     <Content Include="Content\bower_components\bootstrap-daterangepicker\example\browserify\README.md" />
     <Content Include="Content\bower_components\bootstrap-daterangepicker\package.json" />
     <Content Include="Content\bower_components\bootstrap-daterangepicker\README.md" />
-    <Content Include="Content\bower_components\bootstrap-slider\.bower.json" />
-    <Content Include="Content\bower_components\bootstrap-slider\bower.json" />
-    <Content Include="Content\bower_components\bootstrap-slider\README.md" />
     <Content Include="Content\bower_components\bootstrap-timepicker\.bower.json" />
     <Content Include="Content\bower_components\bootstrap-timepicker\bower.json" />
     <Content Include="Content\bower_components\bootstrap-timepicker\CHANGELOG.md" />
