@@ -93,3 +93,12 @@ D:\PROYECTO DESARROLLO\Fisiandroide-p2.1.1\DAL\bin\Debug\Newtonsoft.Json.xml
 D:\PROYECTO DESARROLLO\Fisiandroide-p2.1.1\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
 D:\PROYECTO DESARROLLO\Fisiandroide-p2.1.1\DAL\obj\Debug\DAL.dll
 D:\PROYECTO DESARROLLO\Fisiandroide-p2.1.1\DAL\obj\Debug\DAL.pdb
+D:\PROYECTO DESARROLLO\POSGRAD\DAL\bin\Debug\DAL.dll
+D:\PROYECTO DESARROLLO\POSGRAD\DAL\bin\Debug\DAL.pdb
+D:\PROYECTO DESARROLLO\POSGRAD\DAL\bin\Debug\ET.dll
+D:\PROYECTO DESARROLLO\POSGRAD\DAL\bin\Debug\Newtonsoft.Json.dll
+D:\PROYECTO DESARROLLO\POSGRAD\DAL\bin\Debug\ET.pdb
+D:\PROYECTO DESARROLLO\POSGRAD\DAL\bin\Debug\Newtonsoft.Json.xml
+D:\PROYECTO DESARROLLO\POSGRAD\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+D:\PROYECTO DESARROLLO\POSGRAD\DAL\obj\Debug\DAL.dll
+D:\PROYECTO DESARROLLO\POSGRAD\DAL\obj\Debug\DAL.pdb
