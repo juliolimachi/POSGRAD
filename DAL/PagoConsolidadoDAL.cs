@@ -52,7 +52,7 @@ namespace DAL
 
                             concepto = new ConceptoPago
                             {
-                                IdConceptoPago = Convert.ToInt32(reader["IdConceptoPago"]),
+                                NroConcepto = reader["NroConcepto"].ToString(),
                             }
 
 
@@ -112,7 +112,7 @@ namespace DAL
 
                             concepto = new ConceptoPago
                             {
-                                IdConceptoPago = Convert.ToInt32(reader["IdConceptoPago"]),
+                                NroConcepto = reader["NroConcepto"].ToString(),
                             }
 
 
@@ -155,7 +155,7 @@ namespace DAL
                     cmd.Parameters.AddWithValue("@FecharRegistro", PagoConsolidado.FecharRegistro);
                     cmd.Parameters.AddWithValue("@FechaPago", PagoConsolidado.FechaPago);
      
-                    cmd.Parameters.AddWithValue("@IdConceptoPago", PagoConsolidado.concepto.IdConceptoPago);
+                    cmd.Parameters.AddWithValue("@NroConcepto", PagoConsolidado.concepto.NroConcepto);
                     cmd.Parameters.AddWithValue("@NroTesoreria", PagoConsolidado.NroTesoreria);
                     cmd.Parameters.AddWithValue("@DescuentoQuince", PagoConsolidado.DescuentoQuince);
                     cmd.Parameters.AddWithValue("@DescuentoQuince", PagoConsolidado.DescuentoQuince);
