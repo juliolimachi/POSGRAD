@@ -1,0 +1,26 @@
+﻿@model ET.Estado
+@{
+    Layout = null;
+}
+
+@using (Html.BeginForm("AddOrEdit", "Estado", FormMethod.Post, new { onsubmit = "return SubmitForm(this)" }))
+{
+    @Html.HiddenFor(model => model.IdEstado)
+    <div class="form-group">
+        @Html.LabelFor(model => model.Descripcion, new { @class = "control-label" })
+        @Html.EditorFor(model => model.Descripcion, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(model => model.Descripcion)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.TipoTabla, new { @class = "control-label" })
+        @Html.EditorFor(model => model.TipoTabla, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(model => model.TipoTabla)
+    </div>
+
+
+
+    <div class="form-group">
+        <input type="submit" value="Guardar" class="btn btn-primary" />
+        <input type="reset" value="Reset" class="btn" />
+    </div>
+}

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="5beedd7fe44648fe9fd0c66a7ae1e120" Name="Diagram1">
+        <EntityTypeShape EntityType="MvcCRUDDBModel.ControlCuota" Width="1.5" PointX="2.75" PointY="3.75" />
+        <EntityTypeShape EntityType="MvcCRUDDBModel.Cuota" Width="1.5" PointX="4.75" PointY="0.75" />
+        <EntityTypeShape EntityType="MvcCRUDDBModel.Employee" Width="1.5" PointX="6.75" PointY="0.75" />
+        <EntityTypeShape EntityType="MvcCRUDDBModel.Pago" Width="1.5" PointX="0.75" PointY="7.75" />
+        <EntityTypeShape EntityType="MvcCRUDDBModel.Usuario" Width="1.5" PointX="3.375" PointY="7.75" />
+        <EntityTypeShape EntityType="MvcCRUDDBModel.ConceptoPago" Width="1.5" PointX="5.375" PointY="7.75" />
+        <EntityTypeShape EntityType="MvcCRUDDBModel.Organizacion" Width="1.5" PointX="7.375" PointY="4.75" />
+        <EntityTypeShape EntityType="MvcCRUDDBModel.Alumno" Width="1.5" PointX="7.375" PointY="7.75" />
+        <EntityTypeShape EntityType="MvcCRUDDBModel.CursoPosgrado" Width="1.5" PointX="9.375" PointY="0.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

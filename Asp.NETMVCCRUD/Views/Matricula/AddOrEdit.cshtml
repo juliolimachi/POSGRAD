@@ -1,0 +1,38 @@
+﻿@model ET.Matricula
+@{
+    Layout = null;
+}
+
+@using (Html.BeginForm("AddOrEdit", "Matricula", FormMethod.Post, new { onsubmit = "return SubmitForm(this)" }))
+{
+    @Html.HiddenFor(model => model.Id_Matricula)
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.CodigoMatricula, new { @class = "control-label" })
+        @Html.EditorFor(model => model.CodigoMatricula, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(model => model.CodigoMatricula)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Numero, new { @class = "control-label" })
+        @Html.EditorFor(model => model.Numero, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(model => model.Numero)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Anho, new { @class = "control-label" })
+        @Html.EditorFor(model => model.Anho, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(model => model.Anho)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.Descripcion, new { @class = "control-label" })
+        @Html.EditorFor(model => model.Descripcion, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(model => model.Descripcion)
+    </div>
+
+
+    <div class="form-group">
+        <input type="submit" value="Guardar" class="btn btn-primary"  />
+        <input type="reset" value="Reset" class="btn" />
+    </div>
+}

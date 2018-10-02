@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MvcCRUDDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="DBModel" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ControlCuotas" EntityType="MvcCRUDDBModel.ControlCuota" />
+    <EntitySet Name="Cuotas" EntityType="MvcCRUDDBModel.Cuota" />
+    <EntitySet Name="Employees" EntityType="MvcCRUDDBModel.Employee" />
+    <EntitySet Name="Pagoes" EntityType="MvcCRUDDBModel.Pago" />
+    <EntitySet Name="Usuarios" EntityType="MvcCRUDDBModel.Usuario" />
+    <EntitySet Name="ConceptoPagoes" EntityType="MvcCRUDDBModel.ConceptoPago" />
+    <EntitySet Name="Organizacions" EntityType="MvcCRUDDBModel.Organizacion" />
+    <EntitySet Name="Alumnoes" EntityType="MvcCRUDDBModel.Alumno" />
+    <EntitySet Name="CursoPosgradoes" EntityType="MvcCRUDDBModel.CursoPosgrado" />
+  </EntityContainer>
+  <EntityType Name="ControlCuota">
+    <Key>
+      <PropertyRef Name="IdControlCuota" />
+    </Key>
+    <Property Name="IdControlCuota" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdCursoPosgrado" Type="Int32" />
+    <Property Name="NumeroCuota" Type="Int32" />
+    <Property Name="Monto" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="FlagFinal" Type="Int32" />
+    <Property Name="FechaVencimiento" Type="DateTime" Precision="3" />
+    <Property Name="Ciclo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Cuota">
+    <Key>
+      <PropertyRef Name="IdCuota" />
+    </Key>
+    <Property Name="IdCuota" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NroCuota" Type="Int32" />
+    <Property Name="Descripcion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Employee">
+    <Key>
+      <PropertyRef Name="EmployeeID" />
+    </Key>
+    <Property Name="EmployeeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Position" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Office" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Salary" Type="Int32" />
+    <Property Name="ImagePath" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Age" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Pago">
+    <Key>
+      <PropertyRef Name="IdPago" />
+    </Key>
+    <Property Name="IdPago" Type="Int32" Nullable="false" />
+    <Property Name="NroRecibo" Type="Int32" />
+    <Property Name="IdAlumno" Type="Int32" />
+    <Property Name="IdCursoPosgrado" Type="Int32" />
+    <Property Name="Monto" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="FechaPago" Type="DateTime" Precision="3" />
+    <Property Name="FechaRegistro" Type="DateTime" Precision="3" />
+    <Property Name="UsuarioRegistro" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ImagenVoucher" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Usuario">
+    <Key>
+      <PropertyRef Name="IdUsuario" />
+    </Key>
+    <Property Name="IdUsuario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NroDocumento" Type="Int32" />
+    <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FechaCreacion" Type="DateTime" Precision="3" />
+    <Property Name="Estado" Type="Int32" />
+    <Property Name="Oficina" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Rol" Type="Int32" />
+    <Property Name="ImagePath" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ConceptoPago">
+    <Key>
+      <PropertyRef Name="IdConceptoPago" />
+    </Key>
+    <Property Name="IdConceptoPago" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NroConcepto" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Descripcion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="FechaCreacion" Type="DateTime" Precision="3" />
+    <Property Name="Estado" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Organizacion">
+    <Key>
+      <PropertyRef Name="IdOrganizacion" />
+    </Key>
+    <Property Name="IdOrganizacion" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NombreOrganizacion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FechaCreacion" Type="DateTime" Precision="3" />
+    <Property Name="Estado" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Alumno">
+    <Key>
+      <PropertyRef Name="IdAlumno" />
+    </Key>
+    <Property Name="IdAlumno" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NroDocumento" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="ApePaterno" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="ApeMaterno" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Nombres" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="NroTelefono" Type="Int32" />
+    <Property Name="IdOrganizacion" Type="Int32" />
+    <Property Name="ImagePath" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CodigoMatricula" Type="Int32" />
+    <Property Name="NombreCompleto" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CursoPosgrado">
+    <Key>
+      <PropertyRef Name="IdCursoPosgrado" />
+    </Key>
+    <Property Name="IdCursoPosgrado" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NombreCursoPosgrado" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="MontoTotal" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Anio" Type="Int32" />
+    <Property Name="FechaCreacion" Type="DateTime" Precision="3" />
+    <Property Name="FechaActualizacion" Type="DateTime" Precision="3" />
+    <Property Name="IdControlCuota" Type="Int32" />
+    <Property Name="IdOrganizacion" Type="Int32" />
+    <Property Name="IdConceptopago" Type="Int32" />
+  </EntityType>
+</Schema>

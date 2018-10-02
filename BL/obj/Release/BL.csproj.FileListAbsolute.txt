@@ -1,0 +1,9 @@
+C:\Users\JULIO\Desktop\Asp.NETMVCCRUD\BL\bin\Release\BL.dll
+C:\Users\JULIO\Desktop\Asp.NETMVCCRUD\BL\bin\Release\BL.pdb
+C:\Users\JULIO\Desktop\Asp.NETMVCCRUD\BL\bin\Release\DAL.dll
+C:\Users\JULIO\Desktop\Asp.NETMVCCRUD\BL\bin\Release\ET.dll
+C:\Users\JULIO\Desktop\Asp.NETMVCCRUD\BL\bin\Release\DAL.pdb
+C:\Users\JULIO\Desktop\Asp.NETMVCCRUD\BL\bin\Release\ET.pdb
+C:\Users\JULIO\Desktop\Asp.NETMVCCRUD\BL\obj\Release\BL.csprojResolveAssemblyReference.cache
+C:\Users\JULIO\Desktop\Asp.NETMVCCRUD\BL\obj\Release\BL.dll
+C:\Users\JULIO\Desktop\Asp.NETMVCCRUD\BL\obj\Release\BL.pdb

@@ -1,0 +1,5 @@
+C:\Users\JULIO\Desktop\Asp.NETMVCCRUD\ET\bin\Release\ET.dll
+C:\Users\JULIO\Desktop\Asp.NETMVCCRUD\ET\bin\Release\ET.pdb
+C:\Users\JULIO\Desktop\Asp.NETMVCCRUD\ET\obj\Release\ET.dll
+C:\Users\JULIO\Desktop\Asp.NETMVCCRUD\ET\obj\Release\ET.pdb
+C:\Users\JULIO\Desktop\Asp.NETMVCCRUD\ET\obj\Release\ET.csprojResolveAssemblyReference.cache

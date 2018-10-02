@@ -1,0 +1,48 @@
+﻿@model Asp.NETMVCCRUD.Models.Alumno
+@{
+    Layout = null;
+}
+
+@using (Html.BeginForm("AddOrEdit", "Alumno", FormMethod.Post, new { onsubmit = "return SubmitForm(this)" }))
+{
+    @Html.HiddenFor(model => model.IdAlumno)
+    <div class="form-group">
+        @Html.LabelFor(model => model.NroDocumento, new { @class = "control-label" })
+        @Html.EditorFor(model => model.NroDocumento, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(model => model.NroDocumento)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.CodigoMatricula, new { @class = "control-label" })
+        @Html.EditorFor(model => model.CodigoMatricula, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(model => model.CodigoMatricula)
+    </div>
+    
+       <div class="form-group">
+        @Html.LabelFor(model => model.ApePaterno, new { @class = "control-label" })
+        @Html.EditorFor(model => model.ApePaterno, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(model => model.ApePaterno)
+    </div>
+    
+       <div class="form-group">
+        @Html.LabelFor(model => model.ApeMaterno, new { @class = "control-label" })
+        @Html.EditorFor(model => model.ApeMaterno, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(model => model.ApeMaterno)
+    </div>
+    
+    
+    <div class="form-group">
+        @Html.LabelFor(model => model.Nombres, new { @class = "control-label" })
+        @Html.EditorFor(model => model.Nombres, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(model => model.Nombres)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.NroTelefono, new { @class = "control-label" })
+        @Html.EditorFor(model => model.NroTelefono, new { htmlAttributes = new { @class = "form-control" } })
+    </div>
+
+    
+    <div class="form-group">
+        <input type="submit" value="Submit" class="btn btn-primary"  />
+        <input type="reset" value="Reset" class="btn" />
+    </div>
+}

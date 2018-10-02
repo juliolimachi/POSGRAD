@@ -1,0 +1,95 @@
+C:\Users\JULIO\Desktop\Asp.NETMVCCRUD\DAL\bin\Debug\DAL.dll
+C:\Users\JULIO\Desktop\Asp.NETMVCCRUD\DAL\bin\Debug\DAL.pdb
+C:\Users\JULIO\Desktop\Asp.NETMVCCRUD\DAL\bin\Debug\ET.dll
+C:\Users\JULIO\Desktop\Asp.NETMVCCRUD\DAL\bin\Debug\ET.pdb
+C:\Users\JULIO\Desktop\Asp.NETMVCCRUD\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\JULIO\Desktop\Asp.NETMVCCRUD\DAL\obj\Debug\DAL.dll
+C:\Users\JULIO\Desktop\Asp.NETMVCCRUD\DAL\obj\Debug\DAL.pdb
+C:\Users\JLIMACHI\Downloads\Fisiandroide-proyectoposgrado-6e48bc8cd3cc\Fisiandroide-proyectoposgrado-6e48bc8cd3cc\DAL\bin\Debug\DAL.dll
+C:\Users\JLIMACHI\Downloads\Fisiandroide-proyectoposgrado-6e48bc8cd3cc\Fisiandroide-proyectoposgrado-6e48bc8cd3cc\DAL\bin\Debug\DAL.pdb
+C:\Users\JLIMACHI\Downloads\Fisiandroide-proyectoposgrado-6e48bc8cd3cc\Fisiandroide-proyectoposgrado-6e48bc8cd3cc\DAL\bin\Debug\ET.dll
+C:\Users\JLIMACHI\Downloads\Fisiandroide-proyectoposgrado-6e48bc8cd3cc\Fisiandroide-proyectoposgrado-6e48bc8cd3cc\DAL\bin\Debug\ET.pdb
+C:\Users\JLIMACHI\Downloads\Fisiandroide-proyectoposgrado-6e48bc8cd3cc\Fisiandroide-proyectoposgrado-6e48bc8cd3cc\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\JLIMACHI\Downloads\Fisiandroide-proyectoposgrado-6e48bc8cd3cc\Fisiandroide-proyectoposgrado-6e48bc8cd3cc\DAL\obj\Debug\DAL.dll
+C:\Users\JLIMACHI\Downloads\Fisiandroide-proyectoposgrado-6e48bc8cd3cc\Fisiandroide-proyectoposgrado-6e48bc8cd3cc\DAL\obj\Debug\DAL.pdb
+C:\Users\JLIMACHI\Downloads\Fisiandroide-proyectoposgrado-6e48bc8cd3cc\Fisiandroide-proyectoposgrado-6e48b\DAL\bin\Debug\DAL.dll
+C:\Users\JLIMACHI\Downloads\Fisiandroide-proyectoposgrado-6e48bc8cd3cc\Fisiandroide-proyectoposgrado-6e48b\DAL\bin\Debug\DAL.pdb
+C:\Users\JLIMACHI\Downloads\Fisiandroide-proyectoposgrado-6e48bc8cd3cc\Fisiandroide-proyectoposgrado-6e48b\DAL\bin\Debug\ET.dll
+C:\Users\JLIMACHI\Downloads\Fisiandroide-proyectoposgrado-6e48bc8cd3cc\Fisiandroide-proyectoposgrado-6e48b\DAL\bin\Debug\ET.pdb
+C:\Users\JLIMACHI\Downloads\Fisiandroide-proyectoposgrado-6e48bc8cd3cc\Fisiandroide-proyectoposgrado-6e48b\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\JLIMACHI\Downloads\Fisiandroide-proyectoposgrado-6e48bc8cd3cc\Fisiandroide-proyectoposgrado-6e48b\DAL\obj\Debug\DAL.dll
+C:\Users\JLIMACHI\Downloads\Fisiandroide-proyectoposgrado-6e48bc8cd3cc\Fisiandroide-proyectoposgrado-6e48b\DAL\obj\Debug\DAL.pdb
+D:\Fisiandroide-proyectoposgrado-6e48bc8cd3cc\Fisiandroide-proyectoposgrado-6e48b\Fisiandroide-p1\DAL\bin\Debug\DAL.dll
+D:\Fisiandroide-proyectoposgrado-6e48bc8cd3cc\Fisiandroide-proyectoposgrado-6e48b\Fisiandroide-p1\DAL\bin\Debug\DAL.pdb
+D:\Fisiandroide-proyectoposgrado-6e48bc8cd3cc\Fisiandroide-proyectoposgrado-6e48b\Fisiandroide-p1\DAL\bin\Debug\ET.dll
+D:\Fisiandroide-proyectoposgrado-6e48bc8cd3cc\Fisiandroide-proyectoposgrado-6e48b\Fisiandroide-p1\DAL\bin\Debug\ET.pdb
+D:\Fisiandroide-proyectoposgrado-6e48bc8cd3cc\Fisiandroide-proyectoposgrado-6e48b\Fisiandroide-p1\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+D:\Fisiandroide-proyectoposgrado-6e48bc8cd3cc\Fisiandroide-proyectoposgrado-6e48b\Fisiandroide-p1\DAL\obj\Debug\DAL.dll
+D:\Fisiandroide-proyectoposgrado-6e48bc8cd3cc\Fisiandroide-proyectoposgrado-6e48b\Fisiandroide-p1\DAL\obj\Debug\DAL.pdb
+D:\PROYECTO DESARROLLO\Fisiandroide-p2.0\DAL\bin\Debug\DAL.dll
+D:\PROYECTO DESARROLLO\Fisiandroide-p2.0\DAL\bin\Debug\DAL.pdb
+D:\PROYECTO DESARROLLO\Fisiandroide-p2.0\DAL\bin\Debug\ET.dll
+D:\PROYECTO DESARROLLO\Fisiandroide-p2.0\DAL\bin\Debug\ET.pdb
+D:\PROYECTO DESARROLLO\Fisiandroide-p2.0\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+D:\PROYECTO DESARROLLO\Fisiandroide-p2.0\DAL\obj\Debug\DAL.dll
+D:\PROYECTO DESARROLLO\Fisiandroide-p2.0\DAL\obj\Debug\DAL.pdb
+D:\Fisiandroide-proyectoposgrado-6e48bc8cd3cc\Fisiandroide-proyectoposgrado-6e48b\Fisiandroide-p2.0.1\Fisiandroide-p2.0.1\DAL\bin\Debug\DAL.dll
+D:\Fisiandroide-proyectoposgrado-6e48bc8cd3cc\Fisiandroide-proyectoposgrado-6e48b\Fisiandroide-p2.0.1\Fisiandroide-p2.0.1\DAL\bin\Debug\DAL.pdb
+D:\Fisiandroide-proyectoposgrado-6e48bc8cd3cc\Fisiandroide-proyectoposgrado-6e48b\Fisiandroide-p2.0.1\Fisiandroide-p2.0.1\DAL\bin\Debug\ET.dll
+D:\Fisiandroide-proyectoposgrado-6e48bc8cd3cc\Fisiandroide-proyectoposgrado-6e48b\Fisiandroide-p2.0.1\Fisiandroide-p2.0.1\DAL\bin\Debug\ET.pdb
+D:\Fisiandroide-proyectoposgrado-6e48bc8cd3cc\Fisiandroide-proyectoposgrado-6e48b\Fisiandroide-p2.0.1\Fisiandroide-p2.0.1\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+D:\Fisiandroide-proyectoposgrado-6e48bc8cd3cc\Fisiandroide-proyectoposgrado-6e48b\Fisiandroide-p2.0.1\Fisiandroide-p2.0.1\DAL\obj\Debug\DAL.dll
+D:\Fisiandroide-proyectoposgrado-6e48bc8cd3cc\Fisiandroide-proyectoposgrado-6e48b\Fisiandroide-p2.0.1\Fisiandroide-p2.0.1\DAL\obj\Debug\DAL.pdb
+D:\PROYECTO DESARROLLO\Fisiandroide-p2.0.2\Fisiandroide-p2.0.1\DAL\bin\Debug\DAL.dll
+D:\PROYECTO DESARROLLO\Fisiandroide-p2.0.2\Fisiandroide-p2.0.1\DAL\bin\Debug\DAL.pdb
+D:\PROYECTO DESARROLLO\Fisiandroide-p2.0.2\Fisiandroide-p2.0.1\DAL\bin\Debug\ET.dll
+D:\PROYECTO DESARROLLO\Fisiandroide-p2.0.2\Fisiandroide-p2.0.1\DAL\bin\Debug\ET.pdb
+D:\PROYECTO DESARROLLO\Fisiandroide-p2.0.2\Fisiandroide-p2.0.1\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+D:\PROYECTO DESARROLLO\Fisiandroide-p2.0.2\Fisiandroide-p2.0.1\DAL\obj\Debug\DAL.dll
+D:\PROYECTO DESARROLLO\Fisiandroide-p2.0.2\Fisiandroide-p2.0.1\DAL\obj\Debug\DAL.pdb
+D:\PROYECTO DESARROLLO\Fisiandroide-p2.0.3\Fisiandroide-p2.0.1\DAL\bin\Debug\DAL.dll
+D:\PROYECTO DESARROLLO\Fisiandroide-p2.0.3\Fisiandroide-p2.0.1\DAL\bin\Debug\DAL.pdb
+D:\PROYECTO DESARROLLO\Fisiandroide-p2.0.3\Fisiandroide-p2.0.1\DAL\bin\Debug\ET.dll
+D:\PROYECTO DESARROLLO\Fisiandroide-p2.0.3\Fisiandroide-p2.0.1\DAL\bin\Debug\ET.pdb
+D:\PROYECTO DESARROLLO\Fisiandroide-p2.0.3\Fisiandroide-p2.0.1\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+D:\PROYECTO DESARROLLO\Fisiandroide-p2.0.3\Fisiandroide-p2.0.1\DAL\obj\Debug\DAL.dll
+D:\PROYECTO DESARROLLO\Fisiandroide-p2.0.3\Fisiandroide-p2.0.1\DAL\obj\Debug\DAL.pdb
+D:\PROYECTO DESARROLLO\Fisiandroide-p2.0.3\Fisiandroide-p2.0.4\DAL\bin\Debug\DAL.dll
+D:\PROYECTO DESARROLLO\Fisiandroide-p2.0.3\Fisiandroide-p2.0.4\DAL\bin\Debug\DAL.pdb
+D:\PROYECTO DESARROLLO\Fisiandroide-p2.0.3\Fisiandroide-p2.0.4\DAL\bin\Debug\ET.dll
+D:\PROYECTO DESARROLLO\Fisiandroide-p2.0.3\Fisiandroide-p2.0.4\DAL\bin\Debug\ET.pdb
+D:\PROYECTO DESARROLLO\Fisiandroide-p2.0.3\Fisiandroide-p2.0.4\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+D:\PROYECTO DESARROLLO\Fisiandroide-p2.0.3\Fisiandroide-p2.0.4\DAL\obj\Debug\DAL.dll
+D:\PROYECTO DESARROLLO\Fisiandroide-p2.0.3\Fisiandroide-p2.0.4\DAL\obj\Debug\DAL.pdb
+D:\PROYECTO DESARROLLO\Fisiandroide-p2.0.3\Fisiandroide-p2.0.5\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+D:\PROYECTO DESARROLLO\Fisiandroide-p2.0.3\Fisiandroide-p2.0.5\DAL\obj\Debug\DAL.dll
+D:\PROYECTO DESARROLLO\Fisiandroide-p2.0.3\Fisiandroide-p2.0.5\DAL\obj\Debug\DAL.pdb
+D:\PROYECTO DESARROLLO\Fisiandroide-p2.0.3\Fisiandroide-p2.0.5\DAL\bin\Debug\DAL.dll
+D:\PROYECTO DESARROLLO\Fisiandroide-p2.0.3\Fisiandroide-p2.0.5\DAL\bin\Debug\DAL.pdb
+D:\PROYECTO DESARROLLO\Fisiandroide-p2.0.3\Fisiandroide-p2.0.5\DAL\bin\Debug\ET.dll
+D:\PROYECTO DESARROLLO\Fisiandroide-p2.0.3\Fisiandroide-p2.0.5\DAL\bin\Debug\ET.pdb
+D:\PROYECTO DESARROLLO\Fisiandroide-p2.0.7\Fisiandroide-p2.0.7\DAL\bin\Debug\DAL.dll
+D:\PROYECTO DESARROLLO\Fisiandroide-p2.0.7\Fisiandroide-p2.0.7\DAL\bin\Debug\DAL.pdb
+D:\PROYECTO DESARROLLO\Fisiandroide-p2.0.7\Fisiandroide-p2.0.7\DAL\bin\Debug\ET.dll
+D:\PROYECTO DESARROLLO\Fisiandroide-p2.0.7\Fisiandroide-p2.0.7\DAL\bin\Debug\ET.pdb
+D:\PROYECTO DESARROLLO\Fisiandroide-p2.0.7\Fisiandroide-p2.0.7\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+D:\PROYECTO DESARROLLO\Fisiandroide-p2.0.7\Fisiandroide-p2.0.7\DAL\obj\Debug\DAL.dll
+D:\PROYECTO DESARROLLO\Fisiandroide-p2.0.7\Fisiandroide-p2.0.7\DAL\obj\Debug\DAL.pdb
+D:\PROYECTO DESARROLLO\Fisiandroide-p2.0.7\Fisiandroide-p2.1.0\DAL\bin\Debug\DAL.dll
+D:\PROYECTO DESARROLLO\Fisiandroide-p2.0.7\Fisiandroide-p2.1.0\DAL\bin\Debug\DAL.pdb
+D:\PROYECTO DESARROLLO\Fisiandroide-p2.0.7\Fisiandroide-p2.1.0\DAL\bin\Debug\ET.dll
+D:\PROYECTO DESARROLLO\Fisiandroide-p2.0.7\Fisiandroide-p2.1.0\DAL\bin\Debug\Newtonsoft.Json.dll
+D:\PROYECTO DESARROLLO\Fisiandroide-p2.0.7\Fisiandroide-p2.1.0\DAL\bin\Debug\ET.pdb
+D:\PROYECTO DESARROLLO\Fisiandroide-p2.0.7\Fisiandroide-p2.1.0\DAL\bin\Debug\Newtonsoft.Json.xml
+D:\PROYECTO DESARROLLO\Fisiandroide-p2.0.7\Fisiandroide-p2.1.0\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+D:\PROYECTO DESARROLLO\Fisiandroide-p2.0.7\Fisiandroide-p2.1.0\DAL\obj\Debug\DAL.dll
+D:\PROYECTO DESARROLLO\Fisiandroide-p2.0.7\Fisiandroide-p2.1.0\DAL\obj\Debug\DAL.pdb
+D:\PROYECTO DESARROLLO\Fisiandroide-p2.1.1\DAL\bin\Debug\DAL.dll
+D:\PROYECTO DESARROLLO\Fisiandroide-p2.1.1\DAL\bin\Debug\DAL.pdb
+D:\PROYECTO DESARROLLO\Fisiandroide-p2.1.1\DAL\bin\Debug\ET.dll
+D:\PROYECTO DESARROLLO\Fisiandroide-p2.1.1\DAL\bin\Debug\Newtonsoft.Json.dll
+D:\PROYECTO DESARROLLO\Fisiandroide-p2.1.1\DAL\bin\Debug\ET.pdb
+D:\PROYECTO DESARROLLO\Fisiandroide-p2.1.1\DAL\bin\Debug\Newtonsoft.Json.xml
+D:\PROYECTO DESARROLLO\Fisiandroide-p2.1.1\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+D:\PROYECTO DESARROLLO\Fisiandroide-p2.1.1\DAL\obj\Debug\DAL.dll
+D:\PROYECTO DESARROLLO\Fisiandroide-p2.1.1\DAL\obj\Debug\DAL.pdb

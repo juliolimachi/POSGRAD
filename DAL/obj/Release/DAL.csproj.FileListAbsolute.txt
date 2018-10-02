@@ -1,0 +1,7 @@
+C:\Users\JULIO\Desktop\Asp.NETMVCCRUD\DAL\bin\Release\DAL.dll
+C:\Users\JULIO\Desktop\Asp.NETMVCCRUD\DAL\bin\Release\DAL.pdb
+C:\Users\JULIO\Desktop\Asp.NETMVCCRUD\DAL\bin\Release\ET.dll
+C:\Users\JULIO\Desktop\Asp.NETMVCCRUD\DAL\bin\Release\ET.pdb
+C:\Users\JULIO\Desktop\Asp.NETMVCCRUD\DAL\obj\Release\DAL.csprojResolveAssemblyReference.cache
+C:\Users\JULIO\Desktop\Asp.NETMVCCRUD\DAL\obj\Release\DAL.dll
+C:\Users\JULIO\Desktop\Asp.NETMVCCRUD\DAL\obj\Release\DAL.pdb

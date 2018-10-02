@@ -1,0 +1,95 @@
+﻿@model ET.PagoConsolidado
+@{
+    Layout = null;
+}
+
+@using (Html.BeginForm("AddOrEdit", "PagoConsolidado", FormMethod.Post, new { onsubmit = "return SubmitForm(this)" }))
+{
+    @Html.HiddenFor(model => model.IdPagoConsolidado)
+    <div class="form-group">
+        @Html.LabelFor(model => model.CodigoAlumno, new { @class = "control-label" })
+        @Html.EditorFor(model => model.CodigoAlumno, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(model => model.CodigoAlumno)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.NumDeposito, new { @class = "control-label" })
+        @Html.EditorFor(model => model.NumDeposito, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(model => model.NumDeposito)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Importe, new { @class = "control-label" })
+        @Html.EditorFor(model => model.Importe, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(model => model.Importe)
+    </div>
+
+
+
+    <div class="form-group">
+       Codigo de Semestre
+        @Html.EditorFor(model => model.CodigoMatricula, new { htmlAttributes = new { @class = "form-control" } })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.FechaPago, new { @class = "control-label" })
+        @Html.EditorFor(model => model.FechaPago, new { htmlAttributes = new { @class = "form-control" } })
+    </div>
+
+
+     
+
+
+        @*<div class="form-group">
+
+            Active/Deactive
+            <div class="SlideButton" style="float: none; margin: 14px 30px 0 0">
+             
+                @Html.CheckBoxFor(model => model.chkActiveDeactive, new { htmlAttributes = new { @class = "toggle" } })
+                <label for="chkActiveDeactive">
+                </label>
+            </div>
+        </div>*@
+
+
+
+        <div class="form-group">
+            <input type="submit" value="Submit" class="btn btn-primary" />
+            <input type="reset" value="Reset" class="btn" />
+        </div>
+
+
+}
+
+<script type="text/javascript">
+
+
+    $(document).ready(function () {
+        if ($("#chkActiveDeactive").is(':checked')) {
+
+            chkActiveDeactive = true
+            console.log("activo");
+        } else {
+
+            chkActiveDeactive = false;
+            console.log("Inactivo");
+        }
+    });
+
+
+    $("#chkActiveDeactive").click(function () {
+        if ($("#chkActiveDeactive").is(':checked')){
+
+            chkActiveDeactive = true
+            console.log("activo");
+        } else
+    {
+
+            chkActiveDeactive = false;
+            console.log("Inactivo");
+    }
+    });
+
+
+
+</script>
