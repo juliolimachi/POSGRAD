@@ -88,14 +88,17 @@
                     {
                         "data": "IdAlumnoMatricula", "render": function (data) {
                         return "<a class='btn btn-default btn-sm' onclick=PopupForm('@Url.Action("AddOrEdit","AlumnoMatricula")/" + data + "')><i class='fa fa-pencil'></i> Edit</a><a class='btn btn-danger btn-sm' style='margin-left:5px' onclick=Delete(" + data + ")><i class='fa fa-trash'></i> Delete</a> ";
-                    },
+                         }
 
                     },
+
+
+
                       {
                           "data": "IdAlumnoMatricula", "render": function (data) {
 
                               return "<a class='btnVerCrystal_ btn btn-success btn-xs' style='margin-right: 5px;' onclick=PopupFormReporte(" + data + ") data-id='" + data + "'  data-title='tooltip' data-placement='top'  data-toggle='modal' data-target='#modalito' data-original-title='Generar Crystall'><span class='glyphicon glyphicon-zoom-in'></span></a>";
-                          },
+                          }
 
                       }
 

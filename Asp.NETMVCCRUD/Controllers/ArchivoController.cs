@@ -66,7 +66,7 @@ namespace Asp.NETMVCCRUD.Controllers
         {
           
 
-        string directory = ConfigurationManager.AppSettings["inspecciones"];
+        string directory = ConfigurationManager.AppSettings["ALumnos"];
 
           
 
@@ -137,7 +137,7 @@ namespace Asp.NETMVCCRUD.Controllers
             List<AlumnoMatricula> items = new List<AlumnoMatricula>();
 
 
-            string directory = ConfigurationManager.AppSettings["inspecciones"];
+            string directory = ConfigurationManager.AppSettings["Alumnos"];
 
             var nombreArchivo = ArchivoBl.ObtenerArchivoPorCodigoBL(id);
             var path = Path.Combine(directory, nombreArchivo.NombreArchivo);

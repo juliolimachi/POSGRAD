@@ -55,7 +55,7 @@ namespace Asp.NETMVCCRUD.Controllers
         public ActionResult AddOrEdit(Usuario usu)
         {
 
-            usu.FechaCreacion = DateTime.Today;
+            //usu.FechaCreacion = DateTime.Today;
            
                 if (usu.IdUsuario == 0)
                 {

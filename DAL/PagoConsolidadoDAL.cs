@@ -15,6 +15,8 @@ namespace DAL
 
 
         readonly string ConnectionString = ConfigurationManager.ConnectionStrings["AATEConnectionString"].ConnectionString;
+        DateTime rngMin = (DateTime)System.Data.SqlTypes.SqlDateTime.MinValue;
+        DateTime rngMax = (DateTime)System.Data.SqlTypes.SqlDateTime.MaxValue;
 
         #region [ PagoConsolidado ]
 
@@ -43,7 +45,7 @@ namespace DAL
                             NumDeposito = Convert.ToInt32(reader["NumDeposito"]),
                             CodigoAlumno = Convert.ToInt32(reader["CodigoAlumno"]),
                             Importe = Convert.ToInt32(reader["Importe"]),
-                            FecharRegistro = Convert.ToDateTime(reader["FecharRegistro"]),
+                            FecharRegistro = Convert.ToDateTime( reader["FecharRegistro"] is DBNull ? rngMin: reader["FecharRegistro"]),
                             FechaPago = Convert.ToDateTime(reader["FechaPago"]),
                             CodigoMatricula = Convert.ToInt32(reader["CodigoMatricula"] is DBNull?0: reader["CodigoMatricula"]),
                             NroTesoreria= Convert.ToInt32(reader["NroTesoreria"] is DBNull ?0: reader["NroTesoreria"]),
@@ -103,7 +105,7 @@ namespace DAL
                             NumDeposito = Convert.ToInt32(reader["NumDeposito"]),
                             CodigoAlumno = Convert.ToInt32(reader["CodigoAlumno"]),
                             Importe = Convert.ToInt32(reader["Importe"]),
-                            FecharRegistro = Convert.ToDateTime(reader["FecharRegistro"]),
+                            FecharRegistro = Convert.ToDateTime(reader["FecharRegistro"] is DBNull ? rngMin : reader["FecharRegistro"]),
                             FechaPago = Convert.ToDateTime(reader["FechaPago"]),
                             CodigoMatricula = Convert.ToInt32(reader["CodigoMatricula"] is DBNull ? 0 : reader["CodigoMatricula"]),
                             NroTesoreria = Convert.ToInt32(reader["NroTesoreria"] is DBNull ? 0 : reader["NroTesoreria"]),
@@ -147,18 +149,20 @@ namespace DAL
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Connection = con;
 
+                   
+
                     cmd.Parameters.AddWithValue("@IdPagoConsolidado", PagoConsolidado.IdPagoConsolidado);
                     cmd.Parameters.AddWithValue("@NumDeposito", PagoConsolidado.NumDeposito);
                     cmd.Parameters.AddWithValue("@CodigoAlumno", PagoConsolidado.CodigoAlumno);
                     cmd.Parameters.AddWithValue("@Importe", PagoConsolidado.Importe);
 
                     cmd.Parameters.AddWithValue("@FecharRegistro", PagoConsolidado.FecharRegistro);
-                    cmd.Parameters.AddWithValue("@FechaPago", PagoConsolidado.FechaPago);
+                    cmd.Parameters.AddWithValue("@FechaPago", Convert.ToDateTime(PagoConsolidado.FechaPago));
      
                     cmd.Parameters.AddWithValue("@NroConcepto", PagoConsolidado.concepto.NroConcepto);
                     cmd.Parameters.AddWithValue("@NroTesoreria", PagoConsolidado.NroTesoreria);
                     cmd.Parameters.AddWithValue("@DescuentoQuince", PagoConsolidado.DescuentoQuince);
-                    cmd.Parameters.AddWithValue("@DescuentoQuince", PagoConsolidado.DescuentoQuince);
+                    cmd.Parameters.AddWithValue("@DescuentoDiez", PagoConsolidado.DescuentoDiez);
                     cmd.Parameters.AddWithValue("@CodigoMatricula", PagoConsolidado.CodigoMatricula);
 
                     cmd.ExecuteNonQuery();

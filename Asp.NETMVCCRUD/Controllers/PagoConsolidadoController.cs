@@ -29,6 +29,7 @@ namespace Asp.NETMVCCRUD.Controllers
 
         [HttpGet]
         public ActionResult AddOrEdit(int id = 0)
+
         {
             if (id == 0)
                 return View(new PagoConsolidado());
@@ -45,12 +46,13 @@ namespace Asp.NETMVCCRUD.Controllers
         public ActionResult AddOrEdit(PagoConsolidado PagoConsolidado)
         {
 
-           
 
+            PagoConsolidado.FecharRegistro = DateTime.Today;
             if (PagoConsolidado.IdPagoConsolidado == 0)
             {
                 if (ModelState.IsValid)
                 {
+                   
                     bool flag = this.PagoConsolidadoBL.RegistrarPagoConsolidadoBL(PagoConsolidado);
                     return Json(new { success = true, message = "Guardado Correcto" }, JsonRequestBehavior.AllowGet);
 

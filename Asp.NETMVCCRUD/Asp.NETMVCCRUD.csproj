@@ -4859,14 +4859,16 @@
     <Content Include="Views\Pago\AddOrEdit.cshtml" />
     <Content Include="Views\Matricula\AddOrEdit.cshtml" />
     <Content Include="Views\Matricula\Index.cshtml" />
-    <Content Include="Views\PagoConsolidado\AddOrEdit.cshtml" />
-    <Content Include="Views\PagoConsolidado\Index.cshtml" />
+    <Content Include="Views\PagoConsolidado\AddOrEdit2.cshtml" />
+    <Content Include="Views\PagoConsolidado\Index2.cshtml" />
     <Content Include="Views\AlumnoMatricula\AddOrEdit.cshtml" />
     <Content Include="Views\AlumnoMatricula\Index.cshtml" />
     <Content Include="Views\Archivo\Index.cshtml" />
     <Content Include="Views\Archivo\AddOrEdit.cshtml" />
     <Content Include="Views\ArchivoPago\AddOrEdit.cshtml" />
     <Content Include="Views\ArchivoPago\Index.cshtml" />
+    <Content Include="Views\PagoConsolidado\AddOrEdit.cshtml" />
+    <Content Include="Views\PagoConsolidado\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
