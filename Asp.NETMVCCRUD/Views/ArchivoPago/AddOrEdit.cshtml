@@ -3,7 +3,7 @@
     Layout = null;
 }
 
-@using (Html.BeginForm("AddOrEdit", "Archivo", FormMethod.Post, new { onsubmit = "return SubmitForm(this)" }))
+@using (Html.BeginForm("AddOrEdit", "ArchivoPago", FormMethod.Post, new { onsubmit = "return SubmitForm(this)" }))
 {
     @Html.HiddenFor(model => model.IdArchivo)
     <div class="form-group">
