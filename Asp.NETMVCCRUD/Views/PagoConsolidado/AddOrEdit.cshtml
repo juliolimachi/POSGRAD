@@ -44,7 +44,19 @@
     </div>
 
 
-     
+    <div class="form-group">
+        <label>Date:</label>
+
+        <div class="input-group date">
+            <div class="input-group-addon">
+                <i class="fa fa-calendar"></i>
+            </div>
+            <input type="text" class="form-control pull-right" id="datepicker">
+        </div>
+        <!-- /.input group -->
+    </div>
+              <!-- /.form group -->
+
 
 
         @*<div class="form-group">
@@ -67,7 +79,17 @@
 
 
 }
+<script src="~/Content/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+<script>
+   
+  $(function () {
 
+    //Date picker
+    $('#datepicker').datepicker({
+      autoclose: true
+    })
+  })
+</script>
 <script type="text/javascript">
 
 
