@@ -50,6 +50,7 @@
     <Compile Include="Cuota.cs" />
     <Compile Include="CursoPosgrado.cs" />
     <Compile Include="Estado.cs" />
+    <Compile Include="Model\LoginViewModel.cs" />
     <Compile Include="Model\ResponseModel.cs" />
     <Compile Include="Organizacion.cs" />
     <Compile Include="Pago.cs" />

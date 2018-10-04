@@ -114,6 +114,61 @@ namespace DAL
         }
 
 
+        public Usuario ObtenerUsuarioCredenciales(string codigoUsuario,string password)
+        {
+
+            string spName = "[Usuario_GetByUserPassword]";
+
+            List<Usuario> Usuarios = new List<Usuario>();
+            Usuario item = null;
+
+
+            using (SqlConnection con = new SqlConnection(ConnectionString))
+            {
+                con.Open();
+
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandText = spName;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@IdUsuario", codigoUsuario);
+                cmd.Parameters.AddWithValue("@contrasenia", password);
+                cmd.Connection = con;
+
+
+                using (var reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        var Usuario = new Usuario
+                        {
+
+                            IdUsuario = Convert.ToInt32(reader["IdUsuario"]),
+                            NroDocumento = Convert.ToInt32(reader["NroDocumento"]),
+                            UserName = reader["UserName"].ToString(),
+                            Oficina = reader["Oficina"].ToString(),
+                            Estado = Convert.ToInt32(reader["Estado"]),
+                            Password = reader["Password"].ToString(),
+                            Rol = Convert.ToInt32(reader["Rol"] is DBNull ? 0 : reader["Rol"]),
+                            FechaCreacion = Convert.ToDateTime(reader["FechaCreacion"])
+
+
+                        };
+
+                        Usuarios.Add(Usuario);
+                        item = Usuario;
+
+                    }
+
+                }
+
+            }
+
+            return item;
+        }
+
+
+
+
         public bool SaveUsuario(Usuario usuario)
         {
             string spName = "[Usuario_Save]";

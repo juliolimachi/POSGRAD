@@ -132,6 +132,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\blue.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -388,7 +389,6 @@
     <Content Include="Content\bower_components\bootstrap-daterangepicker\website\index.html" />
     <Content Include="Content\bower_components\bootstrap-daterangepicker\website\website.css" />
     <Content Include="Content\bower_components\bootstrap-daterangepicker\website\website.js" />
-    <Content Include="Content\bower_components\bootstrap-timepicker\js\bootstrap-timepicker.js" />
     <Content Include="Content\bower_components\bootstrap\dist\css\bootstrap-theme.css" />
     <Content Include="Content\bower_components\bootstrap\dist\css\bootstrap-theme.min.css" />
     <Content Include="Content\bower_components\bootstrap\dist\css\bootstrap.css" />
@@ -3135,12 +3135,10 @@
     <Content Include="Content\bower_components\datatables.net\js\jquery.dataTables.js" />
     <Content Include="Content\bower_components\datatables.net\js\jquery.dataTables.min.js" />
     <Content Include="Content\bower_components\datatables.net\License.txt" />
-    <Content Include="Content\bower_components\eve-raphael\e.html" />
-    <Content Include="Content\bower_components\eve-raphael\eve.js" />
     <Content Include="Content\bower_components\fastclick\lib\fastclick.js" />
     <Content Include="Content\bower_components\font-awesome\.gitignore" />
     <Content Include="Content\bower_components\font-awesome\css\font-awesome.css" />
-    <Content Include="Content\bower_components\font-awesome\css\font-awesome.min.css" />
+    <Content Include="Content\font-awesome.min.css" />
     <Content Include="Content\bower_components\font-awesome\fonts\fontawesome-webfont.svg" />
     <Content Include="Content\bower_components\font-awesome\HELP-US-OUT.txt" />
     <Content Include="Content\bower_components\jquery-ui\.gitignore" />
@@ -4058,7 +4056,7 @@
     <Content Include="Content\build\js\TodoList.js" />
     <Content Include="Content\build\js\Tree.js" />
     <Content Include="Content\dist\css\AdminLTE.css" />
-    <Content Include="Content\dist\css\AdminLTE.min.css" />
+    <Content Include="Content\AdminLTE.min.css" />
     <Content Include="Content\dist\css\alt\AdminLTE-bootstrap-social.css" />
     <Content Include="Content\dist\css\alt\AdminLTE-bootstrap-social.min.css" />
     <Content Include="Content\dist\css\alt\AdminLTE-fullcalendar.css" />
@@ -4129,6 +4127,7 @@
     <Content Include="Content\dist\js\pages\dashboard.js" />
     <Content Include="Content\dist\js\pages\dashboard2.js" />
     <Content Include="Content\dist\js\select2.min.js" />
+    <Content Include="Content\ionicons.min.css" />
     <Content Include="Content\pages\calendar.html" />
     <Content Include="Content\pages\charts\chartjs.html" />
     <Content Include="Content\pages\charts\flot.html" />
@@ -4411,12 +4410,6 @@
     <Content Include="Content\bower_components\bootstrap-daterangepicker\example\browserify\README.md" />
     <Content Include="Content\bower_components\bootstrap-daterangepicker\package.json" />
     <Content Include="Content\bower_components\bootstrap-daterangepicker\README.md" />
-    <Content Include="Content\bower_components\bootstrap-timepicker\.bower.json" />
-    <Content Include="Content\bower_components\bootstrap-timepicker\bower.json" />
-    <Content Include="Content\bower_components\bootstrap-timepicker\CHANGELOG.md" />
-    <Content Include="Content\bower_components\bootstrap-timepicker\css\timepicker.less" />
-    <Content Include="Content\bower_components\bootstrap-timepicker\LICENSE" />
-    <Content Include="Content\bower_components\bootstrap-timepicker\README.md" />
     <Content Include="Content\bower_components\bootstrap\.bower.json" />
     <Content Include="Content\bower_components\bootstrap\bower.json" />
     <Content Include="Content\bower_components\bootstrap\CHANGELOG.md" />
@@ -4547,12 +4540,6 @@
     <Content Include="Content\bower_components\datatables.net\.bower.json" />
     <Content Include="Content\bower_components\datatables.net\bower.json" />
     <Content Include="Content\bower_components\datatables.net\Readme.md" />
-    <Content Include="Content\bower_components\eve-raphael\.bower.json" />
-    <Content Include="Content\bower_components\eve-raphael\bower.json" />
-    <Content Include="Content\bower_components\eve-raphael\component.json" />
-    <Content Include="Content\bower_components\eve-raphael\LICENSE" />
-    <Content Include="Content\bower_components\eve-raphael\package.json" />
-    <Content Include="Content\bower_components\eve-raphael\README.md" />
     <Content Include="Content\bower_components\fastclick\.bower.json" />
     <Content Include="Content\bower_components\fastclick\bower.json" />
     <Content Include="Content\bower_components\fastclick\LICENSE" />
@@ -4803,6 +4790,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AlumnoController.cs" />
     <Compile Include="Controllers\AlumnoMatriculaController.cs" />
     <Compile Include="Controllers\ArchivoController.cs" />
@@ -4869,6 +4857,7 @@
     <Content Include="Views\ArchivoPago\Index.cshtml" />
     <Content Include="Views\PagoConsolidado\AddOrEdit.cshtml" />
     <Content Include="Views\PagoConsolidado\Index.cshtml" />
+    <Content Include="Views\Account\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

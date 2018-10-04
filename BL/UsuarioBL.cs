@@ -26,12 +26,19 @@ namespace BL
             return usuarioDAL.ObtenerUsuarioPorCodigo(codigoUsuario);
         }
 
+        
+         public Usuario ObtenerUsuarioCredencialesBL(string codigoUsuario,string password)
+        {
+            return usuarioDAL.ObtenerUsuarioCredenciales(codigoUsuario,password);
+        }
 
         public bool GuardarUsuario(Usuario usuario)
         {
             return usuarioDAL.SaveUsuario(usuario);
 
         }
+
+
 
         public bool EliminarUsuario(string codigousuario)
         {
