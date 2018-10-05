@@ -29,7 +29,7 @@ namespace Asp.NETMVCCRUD.Controllers
 
         [HttpPost]
         [AllowAnonymous]
-        [Route("index")]
+  
         public ActionResult Login(LoginViewModel model, string returnUrl = null)
         {
             ViewData["ReturnUrl"] = returnUrl;
