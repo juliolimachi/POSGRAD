@@ -11,12 +11,10 @@ using System.Web.Configuration;
 using System.Web.Mvc;
 
 namespace Asp.NETMVCCRUD.Controllers
-{
+{   
     public class ArchivoPagoController : Controller
     {
         // GET: ArchivoPagoPago
-
-
 
         public static string DB_PATH = @"";
         protected readonly RuleSettings _fileSettings;
@@ -34,7 +32,6 @@ namespace Asp.NETMVCCRUD.Controllers
         {
 
             var usuList = ArchivoPagoBl.ObtenerArchivoPagos();
-
             return Json(new { data = usuList }, JsonRequestBehavior.AllowGet);
 
         }
@@ -117,10 +114,6 @@ namespace Asp.NETMVCCRUD.Controllers
             }
             return Json(new { success = false, message = "Update Successfully" }, JsonRequestBehavior.AllowGet);
         }
-
-
-
-
 
         [HttpPost]
         public ActionResult UploadProcesar(string id)

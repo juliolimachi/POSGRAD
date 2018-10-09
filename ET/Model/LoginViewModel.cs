@@ -7,9 +7,10 @@ using System.Threading.Tasks;
 
 namespace ET.Model
 {
-   public  class LoginViewModel
+    public class LoginViewModel
     {
         [Required]
+        [DataType(DataType.Text)]
         public string UserName { get; set; }
 
         [Required]

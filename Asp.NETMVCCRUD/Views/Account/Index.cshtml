@@ -137,7 +137,7 @@
 
     <script src="~/Content/plugins/iCheck/icheck.min.js"></script>
     <script>
- 
+
         $(function () {
             // Validation
             $("#login-form").validate({
@@ -150,6 +150,7 @@
                     'Password': {
                         required: true,
                         minlength: 6
+                        
                     }
                 },
 
@@ -159,7 +160,8 @@
                         required: 'Por favor, introduzca su Usuario'
                     },
                     'Password': {
-                        required: 'Ingrese su contraseña'
+                        required: 'Ingrese su contraseña',
+                        error:'Contraseña Incorrecta'
                     }
                 },
 
@@ -186,11 +188,10 @@
                     url: "/Account/Login",
                     dataType: 'json',
                     data: {
-                        usuario: $('#UserName').val(), password: $('#Password').val()
+                        UserName: $('#UserName').val(), password: $('#Password').val()
                     },
                     success: function (resultado) {
-                        $('#accionResultado').removeClass("action-alert");
-                        $("#accionResultado").html("");
+                        window.location.href = '@Url.Action("Index", "AlumnoMatricula")';
 
 
                     },

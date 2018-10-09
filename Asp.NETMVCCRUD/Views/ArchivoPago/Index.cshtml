@@ -130,8 +130,6 @@
                                         if (value === 0) {
                                             return "<small class='label label-warning'><i class='fa fa-clock-o'></i>Pendiente</small>";
                                         }
-                                        
-
                                         if (value === 1) {
                                             return "<small class='label label-success'>Validado</small>";
                                         }
@@ -159,8 +157,6 @@
                               },
 
                           }
-
-
                     ],
                     "language": {
 
@@ -179,7 +175,7 @@
                         autoOpen: true,
                         resizable: false,
                         title: 'Detalle de Archivos',
-                        height: 550,
+                        height: 450,
                         width: 400,
                         close: function () {
                             Popup.dialog('destroy').remove();
@@ -194,13 +190,11 @@
 
             function PopupFormReporte(id) {
 
-
                 $("#Visor_Imagen").hide();
                 $("#Visor_Pdf").hide();
 
                 var href = '@Url.Action("GenerarReporte", "ArchivoPago", new { Id = "id" })';
                 href = href.replace("id", encodeURIComponent(id));
-
 
                 $("#Visor_Pdf").show();
                 $("#Visor_Pdf").attr("src", href);
