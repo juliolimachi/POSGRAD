@@ -52,6 +52,12 @@ namespace BL
             return maestraDAL.EliminarPagoConsolidadoPorCodigo(id);
 
         }
+
+
+
+
+
+
         #endregion
 
     }

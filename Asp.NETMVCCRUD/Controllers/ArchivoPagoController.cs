@@ -149,16 +149,16 @@ namespace Asp.NETMVCCRUD.Controllers
                         var item = new PagoConsolidado()
                         {
 
-                            NumDeposito = ws.Cells[$"B{rowNumber}"].GetValue<int>(),
-                            CodigoAlumno = ws.Cells[$"C{rowNumber}"].GetValue<int>(),
-                            Importe = ws.Cells[$"D{rowNumber}"].GetValue<decimal>(),
-                            FecharRegistro = ws.Cells[$"E{rowNumber}"].GetValue<DateTime>(),
-                            FechaPago = ws.Cells[$"E{rowNumber}"].GetValue<DateTime>(),
-                            CodigoMatricula = ws.Cells[$"F{rowNumber}"].GetValue<int>(),
+                            NumDeposito = ws.Cells[$"F{rowNumber}"].GetValue<int>(),
+                            CodigoAlumno = ws.Cells[$"G{rowNumber}"].GetValue<int>(),
+                            Importe = ws.Cells[$"I{rowNumber}"].GetValue<decimal>(),
+                            FecharRegistro = DateTime.Today,
+                            FechaPago = ws.Cells[$"O{rowNumber}"].GetValue<DateTime>(),
+                      
 
                             concepto = new ConceptoPago()
                             {
-                                IdConceptoPago = ws.Cells[$"F{rowNumber}"].GetValue<int>(),
+                                NroConcepto = ws.Cells[$"C{rowNumber}"].GetValue<string>(),
                             }
 
 
@@ -169,7 +169,9 @@ namespace Asp.NETMVCCRUD.Controllers
                     }
                     catch (Exception e)
                     {
-                        //errorLoad = new { HasError = true, Message = $"[ERROR] [ROW: {rowNumber}]Error a procesar una fila en el ArchivoPago. {e.Message}".Left(255) };
+
+                        return Json(new { success = false, message = $"[ERROR][ROW: { rowNumber}]Error a procesar una fila en el ArchivoPago." }, JsonRequestBehavior.AllowGet);
+                      
                         break;
                     }
 
@@ -177,7 +179,22 @@ namespace Asp.NETMVCCRUD.Controllers
                 }
             }
 
-            return Json(new { success = false, message = "Ocurrió un Error en la carga" }, JsonRequestBehavior.AllowGet);
+
+            bool flag = ArchivoPagoBl.InsertarPagoConsolidado(items);
+
+
+            if (flag)
+            {
+                return Json(new { success = false, message = "Procesado Correctmante" }, JsonRequestBehavior.AllowGet);
+
+
+            }
+            else
+            {
+                return Json(new { success = false, message = "Ocurrió un Error en la carga" }, JsonRequestBehavior.AllowGet);
+            }
+
+            
         }
 
 

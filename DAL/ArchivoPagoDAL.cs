@@ -1,4 +1,5 @@
 ﻿using ET;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -233,6 +234,41 @@ namespace DAL
         }
 
         #endregion
+
+
+        public bool InsertarPagosConsolidadoJson(List<PagoConsolidado> Lista_pagos)
+        {
+
+            string spName = "[INSERTAR_PAGO_CONSOLIDADO_JSON]";
+
+
+            var respuesta = false;
+            var Listajson = JsonConvert.SerializeObject(Lista_pagos);
+
+            using (SqlConnection con = new SqlConnection(ConnectionString))
+            {
+                con.Open();
+
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandText = spName;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@json", Listajson);
+                cmd.Connection = con;
+
+
+                cmd.ExecuteNonQuery();
+
+                if (con.State != ConnectionState.Closed)
+                {
+                    con.Close();
+                }
+
+                respuesta = true;
+            }
+
+            return respuesta;
+
+        }
 
     }
 }

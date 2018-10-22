@@ -57,6 +57,15 @@ namespace BL
             return maestraDAL.EliminarArchivoPagoPorCodigo(id);
 
         }
+
+        public bool InsertarPagoConsolidado(List<PagoConsolidado> Lista_Pagos)
+        {
+
+            return maestraDAL.InsertarPagosConsolidadoJson(Lista_Pagos);
+
+        }
+
+
         #endregion
 
     }
