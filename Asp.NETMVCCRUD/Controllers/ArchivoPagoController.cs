@@ -21,6 +21,7 @@ namespace Asp.NETMVCCRUD.Controllers
 
         public ArchivoPagoBL ArchivoPagoBl = new ArchivoPagoBL();
         public AlumnoMatriculaBL AlumnoMatriculaBl = new AlumnoMatriculaBL();
+      
         //
         // GET: /ArchivoPago/
         public ActionResult Index()
@@ -140,10 +141,6 @@ namespace Asp.NETMVCCRUD.Controllers
                 
                 int rowNumber = 2;
                 int i = 0;
-
-
-
-
               while (!string.IsNullOrEmpty(ws.Cells[$"A{rowNumber}"].GetValue<string>()))
                 {
 
@@ -182,12 +179,13 @@ namespace Asp.NETMVCCRUD.Controllers
                 if (contador>0)
                 {
                     flag = ArchivoPagoBl.InsertarPagoConsolidado(items);
+                    NombreArchivo.EstadoArchivo = 1;
+                    NombreArchivo.EstadoValidacion = 1;
+                    var flagEstado = this.ArchivoPagoBl.RegistrarArchivoPagoBL(NombreArchivo);
+
                 }
-                
 
            }
-
-
 
             if (flag)
             {

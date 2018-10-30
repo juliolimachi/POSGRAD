@@ -18,7 +18,7 @@
                 <th>Fecha Subida</th>
                 <th>Estado</th>
                 <th>Acciones</th>
-                <th>Mostrar</th>
+                <th>Cargar</th>
             </tr>
         </thead>
     </table>
@@ -131,7 +131,7 @@
                                             return "<small class='label label-warning'><i class='fa fa-clock-o'></i>Pendiente</small>";
                                         }
                                         if (value === 1) {
-                                            return "<small class='label label-success'>Validado</small>";
+                                            return "<small class='label label-success'>Excel cargado</small>";
                                         }
 
                                     }
@@ -148,11 +148,9 @@
                           {
                               "data": "IdArchivoPago", "render": function (data) {
 
-                                  if (data == 0) {
-                                      return "<a class='btn btn-success btn-xs' style='margin-right: 5px;' onclick=CargarExcel(" + data + ") data-id='" + data + "'   data-title='tooltip' data-placement='top'  data-toggle='modal'  data-original-title=''><span class='glyphicon glyphicon-saved'></span></a>";
-                                  } else {
-                                      return "<a class='btn btn-primary btn-xs' style='margin-right: 5px;' onclick=CargarExcel(" + data + ") data-id='" + data + "'  data-title='tooltip' data-placement='top'  data-toggle='modal'  data-original-title=''><span class='glyphicon glyphicon-saved'></span></a>";
-                                  };
+                             
+                                      return "<a class='btn btn-success btn-block ' style='margin-right: 5px;' onclick=CargarExcel(" + data + ") data-id='" + data + "'  data-title='tooltip' data-placement='top'  data-toggle='modal'  data-original-title=''><span class='glyphicon glyphicon-saved'></span></a>";
+                                
                                  
                               },
 

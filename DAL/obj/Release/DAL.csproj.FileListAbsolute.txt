@@ -5,3 +5,12 @@ C:\Users\JULIO\Desktop\Asp.NETMVCCRUD\DAL\bin\Release\ET.pdb
 C:\Users\JULIO\Desktop\Asp.NETMVCCRUD\DAL\obj\Release\DAL.csprojResolveAssemblyReference.cache
 C:\Users\JULIO\Desktop\Asp.NETMVCCRUD\DAL\obj\Release\DAL.dll
 C:\Users\JULIO\Desktop\Asp.NETMVCCRUD\DAL\obj\Release\DAL.pdb
+D:\PROYECTO DESARROLLO\POSGRAD\DAL\bin\Release\DAL.dll
+D:\PROYECTO DESARROLLO\POSGRAD\DAL\bin\Release\DAL.pdb
+D:\PROYECTO DESARROLLO\POSGRAD\DAL\bin\Release\ET.dll
+D:\PROYECTO DESARROLLO\POSGRAD\DAL\bin\Release\Newtonsoft.Json.dll
+D:\PROYECTO DESARROLLO\POSGRAD\DAL\bin\Release\ET.pdb
+D:\PROYECTO DESARROLLO\POSGRAD\DAL\bin\Release\Newtonsoft.Json.xml
+D:\PROYECTO DESARROLLO\POSGRAD\DAL\obj\Release\DAL.csprojResolveAssemblyReference.cache
+D:\PROYECTO DESARROLLO\POSGRAD\DAL\obj\Release\DAL.dll
+D:\PROYECTO DESARROLLO\POSGRAD\DAL\obj\Release\DAL.pdb

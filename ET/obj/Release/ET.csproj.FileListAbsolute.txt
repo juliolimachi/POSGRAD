@@ -3,3 +3,8 @@ C:\Users\JULIO\Desktop\Asp.NETMVCCRUD\ET\bin\Release\ET.pdb
 C:\Users\JULIO\Desktop\Asp.NETMVCCRUD\ET\obj\Release\ET.dll
 C:\Users\JULIO\Desktop\Asp.NETMVCCRUD\ET\obj\Release\ET.pdb
 C:\Users\JULIO\Desktop\Asp.NETMVCCRUD\ET\obj\Release\ET.csprojResolveAssemblyReference.cache
+D:\PROYECTO DESARROLLO\POSGRAD\ET\bin\Release\ET.dll
+D:\PROYECTO DESARROLLO\POSGRAD\ET\bin\Release\ET.pdb
+D:\PROYECTO DESARROLLO\POSGRAD\ET\obj\Release\ET.csprojResolveAssemblyReference.cache
+D:\PROYECTO DESARROLLO\POSGRAD\ET\obj\Release\ET.dll
+D:\PROYECTO DESARROLLO\POSGRAD\ET\obj\Release\ET.pdb
