@@ -17,9 +17,6 @@ namespace ET
 
  
         public int CodigoAlumno { get; set; }
-
-
- 
      
         public Decimal Importe { get; set; }
 

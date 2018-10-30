@@ -120,7 +120,9 @@ namespace Asp.NETMVCCRUD.Controllers
         {
             List<PagoConsolidado> items = new List<PagoConsolidado>();
 
-
+            int validacion = 0;
+            bool flag = false;
+            int contador = 0;
             string directory = ConfigurationManager.AppSettings["Pagos"];
 
             var NombreArchivo = ArchivoPagoBl.ObtenerArchivoPagoPorCodigoBL(id);
@@ -135,15 +137,16 @@ namespace Asp.NETMVCCRUD.Controllers
                 {
                     //throw new BusinessExceptions("No se encontro una Hoja Excel con el nombre: [F.211].");
                 }
-
+                
                 int rowNumber = 2;
                 int i = 0;
-           
 
 
-                while (!string.IsNullOrEmpty(ws.Cells[$"A{rowNumber}"].GetValue<int>().ToString()))
+
+
+              while (!string.IsNullOrEmpty(ws.Cells[$"A{rowNumber}"].GetValue<string>()))
                 {
-                
+
                     try
                     {
                         var item = new PagoConsolidado()
@@ -152,41 +155,43 @@ namespace Asp.NETMVCCRUD.Controllers
                             NumDeposito = ws.Cells[$"F{rowNumber}"].GetValue<int>(),
                             CodigoAlumno = ws.Cells[$"G{rowNumber}"].GetValue<int>(),
                             Importe = ws.Cells[$"I{rowNumber}"].GetValue<decimal>(),
+                            CodigoMatricula= ws.Cells[$"P{rowNumber}"].GetValue<int>(),
                             FecharRegistro = DateTime.Today,
                             FechaPago = ws.Cells[$"O{rowNumber}"].GetValue<DateTime>(),
-                      
-
                             concepto = new ConceptoPago()
                             {
                                 NroConcepto = ws.Cells[$"C{rowNumber}"].GetValue<string>(),
                             }
-
-
                         };
+                  
                         i++;
                         items.Add(item);
+                        contador=items.Count();
 
                     }
                     catch (Exception e)
                     {
-
                         return Json(new { success = false, message = $"[ERROR][ROW: { rowNumber}]Error a procesar una fila en el ArchivoPago." }, JsonRequestBehavior.AllowGet);
-                      
-                        break;
                     }
 
                     rowNumber++;
                 }
-            }
 
 
-            bool flag = ArchivoPagoBl.InsertarPagoConsolidado(items);
+
+                if (contador>0)
+                {
+                    flag = ArchivoPagoBl.InsertarPagoConsolidado(items);
+                }
+                
+
+           }
+
 
 
             if (flag)
             {
                 return Json(new { success = false, message = "Procesado Correctmante" }, JsonRequestBehavior.AllowGet);
-
 
             }
             else

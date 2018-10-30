@@ -52,18 +52,12 @@ namespace Asp.NETMVCCRUD.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                   
                     bool flag = this.PagoConsolidadoBL.RegistrarPagoConsolidadoBL(PagoConsolidado);
                     return Json(new { success = true, message = "Guardado Correcto" }, JsonRequestBehavior.AllowGet);
-
-
                 }
                 else
                 {
-
                     return Json(new { success = true, message = "Guardado Correcto" }, JsonRequestBehavior.AllowGet);
-
-
                 }
 
             }
@@ -75,14 +69,11 @@ namespace Asp.NETMVCCRUD.Controllers
             }
 
 
-
         }
 
         [HttpPost]
         public ActionResult Delete(int id)
         {
-
-
             if (this.PagoConsolidadoBL.EliminarPagoConsolidado(id.ToString()))
             {
                 return Json(new { success = true, message = "Eliminado Correctamente" }, JsonRequestBehavior.AllowGet);
