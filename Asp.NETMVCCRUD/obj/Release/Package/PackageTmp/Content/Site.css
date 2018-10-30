@@ -1,0 +1,252 @@
+﻿
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+
+.field-validation-error {
+        color: #e80c4d;
+        font-weight: bold;
+    }
+
+
+    input.input-validation-error {
+        border: 1px solid #e80c4d;
+    }
+
+    
+input[type="checkbox"].input-validation-error {
+    border: 0 none;
+}
+
+.validation-summary-errors {
+    color: #b94a48;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+
+
+ul.nav.nav-tabs {
+    margin : 10px 0px;
+}
+
+ul.nav.nav-tabs li:not(.active) a {
+        background-color: #eeeeee;
+        color: grey;
+    }
+
+    ul.nav.nav-tabs li.active a {
+        border-top: 3px solid #16a765;
+    }
+
+
+
+
+
+
+  
+  .loader{
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid blue;
+  border-bottom: 16px solid blue;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+ .SlideButton input.toggle
+        {
+            max-height: 0;
+            max-width: 0;
+            opacity: 0;
+            display: none;
+        }
+       
+        /* The following provides the "container" for our toggle in its default (off) state */
+       
+        .SlideButton input.toggle + label
+        {
+            display: block;
+            position: relative;
+            box-shadow: inset 0 0 0px 1px #d5d5d5;
+            text-indent: -5000px;
+            height: 24px;
+            width: 40px;
+            border-radius: 15px;
+        }
+       
+        /* The following provides the green background for the "on" state of our toggle - it is hidden when the switch is off */
+       
+        .SlideButton input.toggle + label:before
+        {
+            content: "";
+            position: absolute;
+            display: block;
+            height: 24px;
+            width: 24px;
+            top: 0;
+            left: 0;
+            border-radius: 15px;
+            background: rgba(19,191,17,0);
+            transition: 250ms ease-in-out;
+        }
+       
+        /* The following provides the actual switch and its drop shadow */
+       
+        .SlideButton input.toggle + label:after
+        {
+            content: "";
+            position: absolute;
+            display: block;
+            height: 24px;
+            width: 24px;
+            top: 0;
+            left: 0px;
+            border-radius: 15px;
+            background: white;
+            box-shadow: inset 0 0 0 1px rgba(0,0,0,.2), 0 2px 4px rgba(0,0,0,.2);
+            transition: 250ms ease-in-out;
+        }
+       
+        /* The following defines the "on" state for the switch */
+       
+        .SlideButton input.toggle:checked + label:before
+        {
+            width: 40px;
+            background: rgba(19,191,17,1);
+        }
+       
+        .SlideButton input.toggle:checked + label:after
+        {
+            left: 16px;
+            box-shadow: inset 0 0 0 1px rgba(19,191,17,1), 0 2px 4px rgba(0,0,0,.2);
+        }
+        .usercreationtxtbox
+        {
+            width: 450px;
+            height: 42px;
+            line-height: 42px;
+            background: #fff;
+            border: 1px #d7d7d7 solid;
+            color: #c4c4c4;
+            font-family: HelveticaNeueLight;
+            font-size: 20px;
+        }
+        .usermain
+        {
+            float: left;
+            width: 86%;
+            margin: 170px 0 0 170px;
+        }
+        .usercreateleft
+        {
+            float: left;
+            min-width: 320px;
+            -moz-box-shadow: 0 0 10px #d1d1d1;
+            -webkit-box-shadow: 0 0 10px #d1d1d1;
+            box-shadow: 0 0 10px #d1d1d1;
+            background: #fff;
+            min-height: 500px;
+            padding: 40px;
+            overflow: auto;
+        }
+        .usrecreationwrapper
+        {
+            width: 100%;
+            margin: 0 auto;
+        }
+        .usrecreationwrapper p
+        {
+            font-size: 56px;
+            font-family: HelveticaNeueUltraLight;
+            margin: 0;
+            float: left;
+            font-weight: lighter;
+            color: #27b6f3;
+        }
+        .usercreationtbl
+        {
+            margin: 0 auto;
+            width: 62%;
+            font-size: 18px;
+            float: left;
+        }
+        .usercreationtxtbox
+        {
+            width: 450px;
+            height: 42px;
+            line-height: 42px;
+            padding: 10px;
+            background: #fff;
+            border: 1px #d7d7d7 solid;
+            color: #c4c4c4;
+            font-family: HelveticaNeueLight;
+            font-size: 20px;
+        }
+        .usercreationtxtbox input
+        {
+            width: 365px;
+            height: 42px;
+            line-height: 42px;
+            background: #fff;
+            border: none;
+            outline: none;
+            color: #c4c4c4;
+            font-family: HelveticaNeueLight;
+            font-size: 20px;
+            margin: 2px 0 0 0px;
+        }
+        .usercreationdrpdown
+        {
+            width: 452px;
+            height: 52px;
+            line-height: 52px;
+            background: #fff;
+            border: 1px #d7d7d7 solid;
+            padding: 0px 0px 0 0;
+            float: left;
+            font-family: HelveticaNeueLight;
+            font-size: 20px;
+            color: #c4c4c4;
+        }
+       
+        .usercreationtxtarea
+        {
+            width: 446px;
+            height: 60px;
+            background: #fff;
+            border: 1px #d7d7d7 solid;
+        }
+ 

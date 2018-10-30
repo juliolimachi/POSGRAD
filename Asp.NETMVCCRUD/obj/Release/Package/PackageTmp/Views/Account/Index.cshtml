@@ -1,0 +1,211 @@
+﻿
+@{ 
+
+    Layout = null;
+
+}
+@model ET.Model.LoginViewModel
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Facultad de Administración </title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.7 -->
+
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <!-- Font Awesome -->
+    <link href="~/Content/font-awesome.min.css" rel="stylesheet" />
+    <!-- Ionicons -->
+    <link href="~/Content/ionicons.min.css" rel="stylesheet" />
+    <!-- Theme style -->
+    <link href="~/Content/AdminLTE.min.css" rel="stylesheet" />
+    <!-- iCheck -->
+    <link href="~/Content/AdminLTE.min.css" rel="stylesheet" />
+
+    <link href="~/Content/blue.css" rel="stylesheet" />
+    
+
+
+    <![endif]-->
+    <!-- Google Font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+</head>
+<body class="hold-transition login-page">
+    <div class="login-box">
+        <div class="login-logo">
+            <a href=""><b>SIS</b>POSGRADO</a>
+        </div>
+        <!-- /.login-logo -->
+        <div class="login-box-body">
+            <p class="login-box-msg">Iniciar Sesión</p>
+
+            <form id="login-form"  method="post" class='form-horizontal'>
+
+                <div class="form-group has-feedback">
+       
+               
+                    <div class="col-md-12">
+                        <div class="input-group">
+                            @Html.TextBoxFor(m => m.UserName, new
+
+                       {
+                           @class = "form-control",
+                           @placeholder = "Usuario"
+                       })
+
+                            <span class="input-group-addon">
+                                <i class="glyphicon glyphicon-user"></i>
+                            </span>  
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="form-group ">
+
+
+                    <div class="col-md-12">
+                        <div class="input-group">
+                            @Html.PasswordFor(m => m.Password, new
+
+                       {
+                           @class = "form-control",
+                           @placeholder = "Password"
+                       })
+
+                            <span class="input-group-addon">
+                                <i class="glyphicon glyphicon-lock"></i>
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+
+
+
+
+          
+
+                <div class="row">
+                    <div class="col-xs-8">
+                        <div class="checkbox icheck">
+                            <label>
+                              
+                            </label>
+                        </div>
+                    </div>
+                    <!-- /.col -->
+                    <div class="col-xs-4">
+                        <button type="button" id="btnEntrarSession"  class="btn btn-primary btn-block btn-flat">Iniciar</button>
+                    </div>
+                    <!-- /.col -->
+                </div>
+
+                @Html.HiddenFor(m => m.ReturnUrl)
+            </form>
+
+     
+            <!-- /.social-auth-links -->
+
+
+
+        </div>
+        <!-- /.login-box-body -->
+    </div>
+    <!-- /.login-box -->
+    <!-- jQuery 3 -->
+
+    <!-- Bootstrap 3.3.7 -->
+    <script src="~/Content/plugins/jquery-1.12.4.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+
+    <script src="~/Content/plugins/bootstrap.min.js"></script>
+    <!-- iCheck -->
+
+    <script src="~/Content/plugins/iCheck/icheck.min.js"></script>
+    <script>
+
+        $(function () {
+            // Validation
+            $("#login-form").validate({
+                onsubmit: false,
+                // Rules for form validation
+                rules: {
+                    'UserName': {
+                        required: true
+                    },
+                    'Password': {
+                        required: true,
+                        minlength: 6
+                        
+                    }
+                },
+
+                // Messages for form validation
+                messages: {
+                    'UserName': {
+                        required: 'Por favor, introduzca su Usuario'
+                    },
+                    'Password': {
+                        required: 'Ingrese su contraseña',
+                        error:'Contraseña Incorrecta'
+                    }
+                },
+
+                // Do not change code below
+                errorPlacement: function (error, element) {
+                    error.insertAfter(element.parent());
+                }
+            });
+
+        });
+
+
+        $("#btnEntrarSession").click(function (evt) {
+            Autenticar();
+        });
+
+
+
+        function Autenticar() {
+            if ($("#login-form").valid()) {
+
+                $.ajax({
+                    type: "POST",
+                    url: "/Account/Login",
+                    dataType: 'json',
+                    data: {
+                        UserName: $('#UserName').val(), password: $('#Password').val()
+                    },
+                    success: function (resultado) {
+                        window.location.href = '@Url.Action("Index", "AlumnoMatricula")';
+
+
+                    },
+                    error: function (req, status, error) {
+                        $('#accionResultado').addClass("action-error");
+                        $('#accionResultado').html("Ha ocurrido un error.");
+                    }
+                });
+            } else {
+                return false;
+            }
+        }
+
+    </script>
+</body>
+</html>
+
