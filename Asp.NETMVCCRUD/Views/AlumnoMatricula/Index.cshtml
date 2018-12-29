@@ -16,6 +16,7 @@
             <th>Fecha</th>
             <th></th>
             <th>Mostrar</th>
+            <th>Detalle</th>
         </tr>
     </thead>
 </table>
@@ -33,6 +34,57 @@
     </div>
 </div>
 
+<div class="modal fade" id="newOrderModal" role="dialog" tabindex="-1">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">×</span></button>
+
+
+                <h4 class="modal-title">
+                    Detalle de Pago
+                </h4>
+            </div>
+            <div class="modal-body">
+
+                <div class="form-horizontal">
+                    <input id="orderMasterId" type="hidden">
+                </div>
+
+
+                <table class="table" id="detalle">
+                    <thead>
+                        <tr>
+                            <th style="width: 35%;">Código</th>
+                            <th style="width: 35%;">Concepto</th>
+                            <th style="width: 40%;">Ingreso Recaudado</th>
+                            <th style="width: 35%;">Creditos</th>
+                            <th style="width: 20%;">Semestre</th>
+                            <th style="width: 20%;">FechaPago</th>
+
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                    <tfoot>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-default" data-dismiss="modal" type="button">Close</button>
+                <button class="btn btn-primary" id="saveOrder" type="button">Save Order</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 <link href="https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap.min.css" rel="stylesheet" />
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
 
@@ -44,11 +96,15 @@
 
 
 
-
-
     <script>
         var Popup, dataTable;
         $(document).ready(function () {
+
+
+
+
+
+
             dataTable =  $("#AlumnoMatriculaTable").DataTable({
                 "ajax": {
                     "url": "/AlumnoMatricula/GetData",
@@ -59,8 +115,8 @@
                     { "data": "IdAlumnoMatricula" },
                     { "data": "CodigoAlumno" },
                     { "data": "NombreAlumno" },
-                     { "data": "CreditoAlumno" },
-                     { "data": "Ciclo" },
+                    { "data": "CreditoAlumno" },
+                    { "data": "Ciclo" },
                          {
                              "data": "FechaMatricula",
                              "render": function (value) {
@@ -84,7 +140,7 @@
                                  return (dd + "/" + mm) + "/" + yyyy;
                              }
                          },
-                      
+
                     {
                         "data": "IdAlumnoMatricula", "render": function (data) {
                         return "<a class='btn btn-default btn-sm' onclick=PopupForm('@Url.Action("AddOrEdit","AlumnoMatricula")/" + data + "')><i class='fa fa-pencil'></i> Edit</a><a class='btn btn-danger btn-sm' style='margin-left:5px' onclick=Delete(" + data + ")><i class='fa fa-trash'></i> Delete</a> ";
@@ -100,7 +156,13 @@
                               return "<a class='btnVerCrystal_ btn btn-success btn-xs' style='margin-right: 5px;' onclick=PopupFormReporte(" + data + ") data-id='" + data + "'  data-title='tooltip' data-placement='top'  data-toggle='modal' data-target='#modalito' data-original-title='Generar Crystall'><span class='glyphicon glyphicon-zoom-in'></span></a>";
                           }
 
-                      }
+                    }, {
+                        "data": "CodigoAlumno", "render": function (data) {
+
+                            return "<a class='btn btn-default btn-xs' style='margin-right: 5px;' onclick=PopupFormDetalle(" + data + ") data-id='" + data + "'  data-title='tooltip' data-placement='top'  data-toggle='modal' data-target='#newOrderModal' data-original-title='Detalle'><span class='glyphicon glyphicon-zoom-in'></span></a>";
+                        }
+
+                    }
 
 
                 ],
@@ -140,13 +202,99 @@
             var href = '@Url.Action("GenerarReporte", "AlumnoMatricula", new { Id = "id" })';
             href = href.replace("id", encodeURIComponent(id));
 
-
             $("#Visor_Pdf").show();
             $("#Visor_Pdf").attr("src", href);
             $("#Visor_Pdf").attr("height", "800");
             $("#Visor_Pdf").attr("width", "800");
 
         }
+
+
+        function PopupFormDetalle(id) {
+
+
+            dataTable = $("#detalle").dataTable({
+                "ajax": {
+                    "url": '@Url.Action("GenerarDetalle", "AlumnoMatricula")/' + id,
+                    "type": "GET",
+                    "datatype": "json"
+                },
+
+                "columns": [
+
+                    { "data": "CodigoAlumno" },
+                    { "data": "Concepto" },
+                    { "data": "IngresoRecaudado" },
+                    { "data": "NumeroCredito" },
+                    { "data": "Semestre" },
+          
+                    {
+                        "data": "FechaPago",
+                             "render": function (value) {
+                            if (value === null) return "";
+                            var pattern = /Date\(([^)]+)\)/;
+                            var results = pattern.exec(value);
+                            var dt = new Date(parseFloat(results[1]));
+
+                            var dd = dt.getDate();
+                            var mm = dt.getMonth() + 1;
+                            var yyyy = dt.getFullYear();
+
+                            if (dd < 10) {
+                                dd = '0' + dd;
+                            }
+
+                            if (mm < 10) {
+                                mm = '0' + mm;
+                            }
+
+                            return (dd + "/" + mm) + "/" + yyyy;
+                        }
+
+
+                    },
+                ],
+
+             
+                "searching": false,
+            
+                "editable":true,
+                "bLengthChange": false,
+                "bFilter": true,
+                "bInfo": false,
+                "language": {
+                 "emptyTable": "No se encontraron datos, haga clic en Button"
+                },
+                drawCallback: function (settings) {
+                    var api = this.api();
+                    var rows = api.rows({ page: 'current' }).nodes();
+                    var last = null;
+
+                    api.column(4, { page: 'current' }).data().each(function (group, i) {
+
+                        if (last !== group) {
+
+                            $(rows).eq(i).before(
+                                '<tr class="group"><td colspan="8" style="BACKGROUND-COLOR:rgb(237, 208, 0);font-weight:700;color:#006232;">' + '' + group + '</td></tr>'
+                            );
+
+                            last = group;
+                        }
+                    });
+
+                }
+
+            });
+
+
+
+
+            $("#Visor_Pdf").show();
+            $("#Visor_Pdf").attr("height", "500");
+            $("#Visor_Pdf").attr("width", "600");
+
+        }
+
 
 
 

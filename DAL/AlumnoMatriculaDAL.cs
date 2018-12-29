@@ -137,6 +137,63 @@ namespace DAL
         }
 
 
+
+
+        public List<EstadoCuenta> ObtenerDetalleAlumnoMatriculaPorCodigo(string codigoAlumnoMatricula)
+        {
+
+            string spName = "[DetalleAlumnoMatricula_GetByCodigo]";
+
+            List<EstadoCuenta> AlumnoMatriculas = new List<EstadoCuenta>();
+            AlumnoMatricula item = null;
+
+
+            using (SqlConnection con = new SqlConnection(ConnectionString))
+            {
+                con.Open();
+
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandText = spName;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@Codigo", codigoAlumnoMatricula);
+                cmd.Connection = con;
+
+
+                using (var reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        var AlumnoMatricula = new EstadoCuenta
+                        {
+
+                            CodigoAlumno = Convert.ToInt32(reader["Codigo"]),
+                            NombreApellidos = reader["NombresApellidos"].ToString(),
+                            NumeroCredito = Convert.ToInt32(reader["NumeroCredito"]),
+                            //Especialidad = reader["Tipoposgrado"].ToString(),
+                            Ciclo = Convert.ToInt32(reader["Ciclo"]),
+                            Concepto= reader["Concepto"].ToString(),
+                            //FlagTercioSuperior = Convert.ToInt32(reader["FlagTercioSuperior"] is DBNull ? 0 : reader["FlagTercioSuperior"]),
+                            Promedio = Convert.ToDecimal(reader["Promedio"] is DBNull ? 0 : reader["Promedio"]),
+                            IngresoRecaudado = Convert.ToDecimal(reader["IngresoRecaudado"]),
+                            Semestre = reader["Semestre"].ToString(),
+                            TipoPosgrado = reader["Tipoposgrado"].ToString(),
+                            FechaPago= Convert.ToDateTime(reader["FechaPago"].ToString())
+
+                        };
+
+                        AlumnoMatriculas.Add(AlumnoMatricula);
+                      
+
+                    }
+
+                }
+
+            }
+
+            return AlumnoMatriculas;
+        }
+
+
         public bool SaveAlumnoMatricula(AlumnoMatricula alumnoMatricula)
         {
             string spName = "[AlumnoMatricula_Save]";

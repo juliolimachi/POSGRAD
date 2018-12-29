@@ -77,3 +77,4 @@ D:\SISTEMA POSGRADO\POSGRAD\ET\bin\Debug\ET.pdb
 D:\SISTEMA POSGRADO\POSGRAD\ET\obj\Debug\ET.csproj.CoreCompileInputs.cache
 D:\SISTEMA POSGRADO\POSGRAD\ET\obj\Debug\ET.dll
 D:\SISTEMA POSGRADO\POSGRAD\ET\obj\Debug\ET.pdb
+D:\SISTEMA POSGRADO\POSGRAD\ET\obj\Debug\ET.csprojAssemblyReference.cache

@@ -6,12 +6,13 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Web;
 using System.Web.Configuration;
 using System.Web.Mvc;
 
 namespace Asp.NETMVCCRUD.Controllers
-{   
+{
     public class ArchivoPagoController : Controller
     {
         // GET: ArchivoPagoPago
@@ -21,7 +22,7 @@ namespace Asp.NETMVCCRUD.Controllers
 
         public ArchivoPagoBL ArchivoPagoBl = new ArchivoPagoBL();
         public AlumnoMatriculaBL AlumnoMatriculaBl = new AlumnoMatriculaBL();
-      
+
         //
         // GET: /ArchivoPago/
         public ActionResult Index()
@@ -119,85 +120,97 @@ namespace Asp.NETMVCCRUD.Controllers
         [HttpPost]
         public ActionResult UploadProcesar(string id)
         {
-            List<PagoConsolidado> items = new List<PagoConsolidado>();
-
-            int validacion = 0;
-            bool flag = false;
-            int contador = 0;
-            string directory = ConfigurationManager.AppSettings["Pagos"];
-
-            var NombreArchivo = ArchivoPagoBl.ObtenerArchivoPagoPorCodigoBL(id);
-            var path = Path.Combine(directory, NombreArchivo.NombreArchivo);
-
-            using (var instream = new FileStream(path, FileMode.Open, FileAccess.ReadWrite))
-            using (var pck = new ExcelPackage(instream))
+            int fila = 0;
+            try
             {
-                var ws = pck.Workbook.Worksheets["F002"];
+                List<PagoConsolidado> items = new List<PagoConsolidado>();
+                bool flag = false;
+                int contador = 0;
 
-                if (ws == null)
-                {
-                    //throw new BusinessExceptions("No se encontro una Hoja Excel con el nombre: [F.211].");
-                }
-                
-                int rowNumber = 2;
-                int i = 0;
-              while (!string.IsNullOrEmpty(ws.Cells[$"A{rowNumber}"].GetValue<string>()))
-                {
+                string directory = ConfigurationManager.AppSettings["Pagos"];
+                var NombreArchivo = ArchivoPagoBl.ObtenerArchivoPagoPorCodigoBL(id);
+                var path = Path.Combine(directory, NombreArchivo.NombreArchivo);
 
-                    try
+                using (var instream = new FileStream(path, FileMode.Open, FileAccess.ReadWrite))
+                using (var pck = new ExcelPackage(instream))
+                {
+                    var ws = pck.Workbook.Worksheets["F002"];
+                    if (ws == null)
                     {
-                        var item = new PagoConsolidado()
+                        //throw new BusinessExceptions("No se encontro una Hoja Excel con el nombre: [F.211].");
+                    }
+                    int rowNumber = 2;
+                    int i = 0;
+                    try {
+                        while (!string.IsNullOrEmpty(ws.Cells[$"B{rowNumber}"].GetValue<string>()))
                         {
-
-                            NumDeposito = ws.Cells[$"F{rowNumber}"].GetValue<int>(),
-                            CodigoAlumno = ws.Cells[$"G{rowNumber}"].GetValue<int>(),
-                            Importe = ws.Cells[$"I{rowNumber}"].GetValue<decimal>(),
-                            CodigoMatricula= ws.Cells[$"P{rowNumber}"].GetValue<int>(),
-                            FecharRegistro = DateTime.Today,
-                            FechaPago = ws.Cells[$"O{rowNumber}"].GetValue<DateTime>(),
-                            concepto = new ConceptoPago()
-                            {
-                                NroConcepto = ws.Cells[$"C{rowNumber}"].GetValue<string>(),
-                            }
-                        };
+                            fila = rowNumber;
+                            var item = new PagoConsolidado();
                   
-                        i++;
+
+                            item.NumDeposito = ws.Cells[$"F{rowNumber}"].GetValue<int>();
+                            item.CodigoAlumno = ws.Cells[$"G{rowNumber}"].GetValue<int>();
+                            item.Importe = ws.Cells[$"I{rowNumber}"].GetValue<decimal>();
+                            item.FecharRegistro = DateTime.Today;
+                            item.FechaPago = ws.Cells[$"N{rowNumber}"].GetValue<DateTime>();
+                            // item.CodigoMatricula = Convert.ToInt32(ws.Cells[$"P{rowNumber}"].GetValue<string>() is "-" ? 0 : ws.Cells[$"P{rowNumber}"].GetValue<int>());
+
+                            item.concepto = new ConceptoPago()
+                            {
+                                
+                                NroConcepto = ws.Cells[$"C{rowNumber}"].GetValue<string>(),
+                            };
+
+                            if (item.concepto.NroConcepto.Length==5)
+                            {
+                                item.concepto.NroConcepto = '0' + item.concepto.NroConcepto;
+                            }
+
+                            i++;
                         items.Add(item);
-                        contador=items.Count();
+                        contador = items.Count();
+                        rowNumber++;
 
                     }
-                    catch (Exception e)
+                    }
+                    catch (Exception ex)
                     {
-                        return Json(new { success = false, message = $"[ERROR][ROW: { rowNumber}]Error a procesar una fila en el ArchivoPago." }, JsonRequestBehavior.AllowGet);
+                        Response.StatusCode = (int)HttpStatusCode.BadRequest;
+                        List<string> errors = new List<string>();
+                        //..some processing
+                        errors.Add($"[ERROR EN EXCEL][FILA: {rowNumber+1}]" + ex.Message);
+                        //..some processing
+                     
+                        return Json(errors);
+                        //return Json(new { success = false, message = $"[ERROR][ROW: {rowNumber}]Error a procesar una fila en el ArchivoPago." }, JsonRequestBehavior.AllowGet);
                     }
 
-                    rowNumber++;
+
+
+                    if (contador > 0)
+                    {
+                        flag = ArchivoPagoBl.InsertarPagoConsolidado(items);
+                        NombreArchivo.EstadoArchivo = 1;
+                        NombreArchivo.EstadoValidacion = 1;
+                        var flagEstado = this.ArchivoPagoBl.RegistrarArchivoPagoBL(NombreArchivo);
+
+                    }
+
                 }
 
-
-
-                if (contador>0)
+                if (flag)
                 {
-                    flag = ArchivoPagoBl.InsertarPagoConsolidado(items);
-                    NombreArchivo.EstadoArchivo = 1;
-                    NombreArchivo.EstadoValidacion = 1;
-                    var flagEstado = this.ArchivoPagoBl.RegistrarArchivoPagoBL(NombreArchivo);
-
+                    return Json(new { success = false, message = "Procesado Correctmante" }, JsonRequestBehavior.AllowGet);
                 }
-
-           }
-
-            if (flag)
-            {
-                return Json(new { success = false, message = "Procesado Correctmante" }, JsonRequestBehavior.AllowGet);
-
+                else
+                {
+                    return Json(new { success = false, message = "Ocurrió un Error en la carga" }, JsonRequestBehavior.AllowGet);
+                }
             }
-            else
+            catch (Exception e)
             {
-                return Json(new { success = false, message = "Ocurrió un Error en la carga" }, JsonRequestBehavior.AllowGet);
+                return Json(new { success = false, message = $"[ERROR][ROW: {fila}]Error a procesar una fila en el ArchivoPago." }, JsonRequestBehavior.AllowGet);
             }
-
-            
         }
 
 

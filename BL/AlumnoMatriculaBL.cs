@@ -29,6 +29,13 @@ namespace BL
         }
 
 
+
+        public List<EstadoCuenta> ObtenerDetalleAlumnoMatriculaPorCodigoBL(string codigoAlumnoMatricula)
+        {
+            return maestraDAL.ObtenerDetalleAlumnoMatriculaPorCodigo(codigoAlumnoMatricula);
+        }
+
+
         public bool ActualizarAlumnoMatriculaBL(AlumnoMatricula alumnoMatricula)
         {
             return maestraDAL.ActualizarAlumnoMatricula(alumnoMatricula);

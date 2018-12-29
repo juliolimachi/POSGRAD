@@ -40,6 +40,8 @@ namespace ET
 
         public ConceptoPago concepto { get; set; }
 
+        public string ConceptodePago { get; set; }
+
 
     }
 }

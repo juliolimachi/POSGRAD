@@ -32,6 +32,14 @@
                     <h4 id="ManModal-title" class="modal-title">Reporte Pago</h4>
                 </div>
                 <iframe style="width:100%;  overflow-y:auto;" id="Visor_Pdf" frameborder="0" class="text-center"></iframe>
+
+
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div id="loading"></div>
+                    </div>
+
+                </div>
             </div>
         </div>
     </div>
@@ -249,21 +257,29 @@
             }
 
 
-            function CargarExcel(id) {
+       function CargarExcel(id) {
                 if (confirm('¿Está seguro de procesar el archivo Excel')) {
                     $.ajax({
                         type: "POST",
                         url: '@Url.Action("UploadProcesar", "ArchivoPago")/' + id,
+
+
                         success: function (data) {
-                            if (data.success) {
-                                dataTable.ajax.reload();
 
-                                $.notify(data.message, {
-                                    globalPosition: "rigth bottom",
-                                    className: "success"
-                                })
+                            dataTable.ajax.reload();
+                            $.notify("Cargado Correctamente","success")
+                         
+                        
+                        },
 
+                        error: function (xhr, textStatus, exceptionThrown) {
+                            var errorData = $.parseJSON(xhr.responseText);
+                            var errorMessages = [];
+                            for (var key in errorData) {
+                                errorMessages.push(errorData[key]);
                             }
+
+                            $.notify(errorMessages)
                         }
 
                     });

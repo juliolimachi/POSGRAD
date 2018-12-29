@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Alumno.cs" />
+    <Compile Include="EstadoCuenta.cs" />
     <Compile Include="AlumnoMatricula.cs" />
     <Compile Include="Archivo.cs" />
     <Compile Include="ArchivoPago.cs" />

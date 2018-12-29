@@ -4,6 +4,8 @@ using CrystalDecisions.Shared;
 using ET;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data.SqlClient;
 using System.IO;
 using System.Linq;
 using System.Web;
@@ -11,8 +13,12 @@ using System.Web.Mvc;
 
 namespace Asp.NETMVCCRUD.Controllers
 {
+
+  
     public class AlumnoMatriculaController : Controller
     {
+        readonly string ConnectionString = ConfigurationManager.ConnectionStrings["AATEConnectionString"].ConnectionString;
+
         // GET: AlumnoMatricula
         public AlumnoMatriculaBL AlumnoMatriculaBl = new AlumnoMatriculaBL();
         private CursoPosgradoBL cursoBL = new CursoPosgradoBL();
@@ -95,7 +101,8 @@ namespace Asp.NETMVCCRUD.Controllers
         public ActionResult GenerarReporte(string id)
         {
 
-            var AlumnoMatricula = AlumnoMatriculaBl.ObtenerAlumnoMatriculaPorCodigoBL(id.ToString());
+           
+           var AlumnoMatricula = AlumnoMatriculaBl.ObtenerAlumnoMatriculaPorCodigoBL(id.ToString());
 
             ReportDocument rd = new ReportDocument();
             rd.Load(Path.Combine(Server.MapPath("~/Reporte"), "crReportePagoConsolidado.rpt"));
@@ -116,6 +123,17 @@ namespace Asp.NETMVCCRUD.Controllers
             return File(stream, "application/pdf");
 
         }
+
+
+
+        public ActionResult GenerarDetalle(string id)
+        {
+
+            var usuList = AlumnoMatriculaBl.ObtenerDetalleAlumnoMatriculaPorCodigoBL(id);
+
+            return Json(new { data = usuList }, JsonRequestBehavior.AllowGet);
+        }
+
 
 
 

@@ -48,6 +48,8 @@ namespace ET
 
         public int IdPrograma { get; set; }
         public int CodigoSemestre { get; set; }
+        public string Semestre { get; set; }
+        public string NombrePrograma { get; set; }
 
     }
 }

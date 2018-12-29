@@ -32,7 +32,7 @@ namespace Asp.NETMVCCRUD.Controllers
   
         public ActionResult Login(LoginViewModel model, string returnUrl = null)
         {
-            ViewData["ReturnUrl"] = "AlumnoMatricula/Index";
+            
 
             if (!ModelState.IsValid)
             {
